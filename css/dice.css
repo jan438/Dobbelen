@@ -5,7 +5,7 @@
   perspective: 210px;
 }
 
-#dice__cube {
+#dice__cube0 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -15,7 +15,7 @@
   transition-duration: 500ms;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube {
+  #dice__cube0 {
     transform-style: flat;
     transform: none !important;
   }
@@ -50,70 +50,70 @@
     transform: translateZ(-35px) rotateX(450deg);
   }
 }
-#dice__cube.show-front {
+#dice__cube0.show-front {
   transform: translateZ(-35px) rotateY(0deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-front .dice__side--front {
+  #dice__cube0.show-front .dice__side--front {
     display: block;
   }
 }
-#dice__cube.show-front.show-same {
+#dice__cube0.show-front.show-same {
   animation: showSameFont 500ms ease;
 }
-#dice__cube.show-right {
+#dice__cube0.show-right {
   transform: translateZ(-35px) rotateY(-90deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-right .dice__side--right {
+  #dice__cube0.show-right .dice__side--right {
     display: block;
   }
 }
-#dice__cube.show-right.show-same {
+#dice__cube0.show-right.show-same {
   animation: showSameRight 500ms ease;
 }
-#dice__cube.show-back {
+#dice__cube0.show-back {
   transform: translateZ(-35px) rotateY(-180deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-back .dice__side--back {
+  #dice__cube0.show-back .dice__side--back {
     display: block;
   }
 }
-#dice__cube.show-back.show-same {
+#dice__cube0.show-back.show-same {
   animation: showSameBack 500ms ease;
 }
-#dice__cube.show-left {
+#dice__cube0.show-left {
   transform: translateZ(-35px) rotateY(90deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-left .dice__side--left {
+  #dice__cube0.show-left .dice__side--left {
     display: block;
   }
 }
-#dice__cube.show-left.show-same {
+#dice__cube0.show-left.show-same {
   animation: showSameLeft 500ms ease;
 }
-#dice__cube.show-top {
+#dice__cube0.show-top {
   transform: translateZ(-35px) rotateX(-90deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-top .dice__side--top {
+  #dice__cube0.show-top .dice__side--top {
     display: block;
   }
 }
-#dice__cube.show-top.show-same {
+#dice__cube0.show-top.show-same {
   animation: showSameTop 500ms ease;
 }
-#dice__cube.show-bottom {
+#dice__cube0.show-bottom {
   transform: translateZ(-35px) rotateX(90deg);
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #dice__cube.show-bottom .dice__side--bottom {
+  #dice__cube0.show-bottom .dice__side--bottom {
     display: block;
   }
 }
-#dice__cube.show-bottom.show-same {
+#dice__cube0.show-bottom.show-same {
   animation: showSameBottom 500ms ease;
 }
 

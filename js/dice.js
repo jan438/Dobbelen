@@ -1,12 +1,7 @@
-/*
- * Dice (https://github.com/alexerlandsson/dice)
- * Copyright 2020 Alexander Erlandsson
- * Licensed under MIT
- */
 
 $(document).ready(function() {
   var history = [];
-  var dice = $('#dice__cube');
+  var dice = $('#dice__cube0');
   var animationSpeed = dice.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
 	function randomizeNumber(low, high) {
