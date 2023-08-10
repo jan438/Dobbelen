@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>alexerlandsson/dice</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Jan Boon" >
+
+    <link href="./css/dice.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(45deg, #004b1a, #267a46);
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .demo__button {
+        margin-top: 20px;
+      }
+
+      .demo__footer {
+        position: fixed;
+        bottom: 20px;
+      }
+
+      .demo__link {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .demo__link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Dice -->
+    <div class="dice__scene">
+      <div id="dice__cube" class="show-front">
+        <div class="dice__side dice__side--front"></div>
+    		<div class="dice__side dice__side--back"></div>
+    		<div class="dice__side dice__side--right"></div>
+    		<div class="dice__side dice__side--left"></div>
+    		<div class="dice__side dice__side--top"></div>
+    		<div class="dice__side dice__side--bottom"></div>
+      </div>
+    </div>
+
+    <audio preload="auto" id="dice__audio">
+    	<source src="./assets/sounds/dice-sound.mp3"></source>
+    </audio>
+    <!-- /Dice -->
+
+    <button class="demo__button" id="dice__btn">Roll the dice</button>
+
+    <footer class="demo__footer">
+      <p>Yahtzee</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="./js/dice.js"></script>
+  </body>
+</html>
