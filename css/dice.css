@@ -3,6 +3,7 @@
   width: 70px;
   height: 70px;
   perspective: 210px;
+  float: left;
 }
 
 #dice__cube0 {
