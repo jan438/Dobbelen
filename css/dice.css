@@ -4,6 +4,8 @@
   height: 70px;
   perspective: 210px;
   float: left;
+  margin-left: 1px;
+  margin-right: 1px;
 }
 
 #dice__cube0 {
