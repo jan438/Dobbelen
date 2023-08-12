@@ -1,8 +1,9 @@
 
 $(document).ready(function() {
   var history = [];
-  var dice = $('#dice__cube0');
-  var animationSpeed = dice.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
+  var dice0 = $('#dice__cube0');
+  var dice1 = $('#dice__cube1');
+  var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
 	function randomizeNumber(low, high) {
 		var random = Math.floor((Math.random() * high) + low);
@@ -38,12 +39,19 @@ $(document).ready(function() {
 	$('#dice__btn').on('click ', function() {
 		var number = randomizeNumber(1, 6);
 
-		if (number == 1) { rollDice(dice, 'front'); }
-		else if (number == 2) { rollDice(dice, 'back'); }
-		else if (number == 3) { rollDice(dice, 'right'); }
-		else if (number == 4) { rollDice(dice,'left'); }
-		else if (number == 5) { rollDice(dice, 'top'); }
-		else if (number == 6) { rollDice(dice, 'bottom'); }
+		if (number == 1) { rollDice(dice0, 'front'); }
+		else if (number == 2) { rollDice(dice0, 'back'); }
+		else if (number == 3) { rollDice(dice0, 'right'); }
+		else if (number == 4) { rollDice(dice0,'left'); }
+		else if (number == 5) { rollDice(dice0, 'top'); }
+		else if (number == 6) { rollDice(dice0, 'bottom'); }
+		number = randomizeNumber(1, 6);
+		if (number == 1) { rollDice(dice1, 'front'); }
+		else if (number == 2) { rollDice(dice1, 'back'); }
+		else if (number == 3) { rollDice(dice1, 'right'); }
+		else if (number == 4) { rollDice(dice1,'left'); }
+		else if (number == 5) { rollDice(dice1, 'top'); }
+		else if (number == 6) { rollDice(dice1, 'bottom'); }
 
 		soundEffect();
 	});
