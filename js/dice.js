@@ -9,21 +9,20 @@ $(document).ready(function() {
 		return random;
 	}
 
-	function rollDice(side) {
-		var currentClass = dice.attr('class').split(' ')[0];
+	function rollDice(diceprm, side) {
+		var currentClass = diceprm.attr('class').split(' ')[0];
 		var newClass = 'show-' + side;
 
-		dice.removeClass();
+		diceprm.removeClass();
 
     if (currentClass == newClass) {
-			dice.addClass(newClass + ' show-same');
+			diceprm.addClass(newClass + ' show-same');
 
-      // Remove animation class after animation has finished
       setTimeout(function() {
-        dice.removeClass('show-same');
+        diceprm.removeClass('show-same');
       }, animationSpeed);
 		} else {
-      dice.addClass(newClass);
+      diceprm.addClass(newClass);
     }
 
     history.push(side);
@@ -39,12 +38,12 @@ $(document).ready(function() {
 	$('#dice__btn').on('click ', function() {
 		var number = randomizeNumber(1, 6);
 
-		if (number == 1) { rollDice('front'); }
-		else if (number == 2) { rollDice('back'); }
-		else if (number == 3) { rollDice('right'); }
-		else if (number == 4) { rollDice('left'); }
-		else if (number == 5) { rollDice('top'); }
-		else if (number == 6) { rollDice('bottom'); }
+		if (number == 1) { rollDice(dice, 'front'); }
+		else if (number == 2) { rollDice(dice, 'back'); }
+		else if (number == 3) { rollDice(dice, 'right'); }
+		else if (number == 4) { rollDice(dice,'left'); }
+		else if (number == 5) { rollDice(dice, 'top'); }
+		else if (number == 6) { rollDice(dice, 'bottom'); }
 
 		soundEffect();
 	});
