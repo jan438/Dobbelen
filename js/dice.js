@@ -77,7 +77,7 @@ $(document).ready(function() {
 		else if (number == 5) { rollDice(dice4, 'top'); }
 		else if (number == 6) { rollDice(dice4, 'bottom'); }
 		var element = document.getElementById("dice__scene0");
-		element.style.border = "4px solid red";
+		element.style.outline = 'red solid 4px';
 
 		soundEffect();
 	});
