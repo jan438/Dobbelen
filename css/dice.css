@@ -483,6 +483,12 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
+th {
+  height: 50px;
+}
+tr {
+  height: 40px;
+}
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
