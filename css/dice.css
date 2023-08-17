@@ -517,3 +517,17 @@
     font-weight: bold;
     color: #009879;
 }
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
