@@ -523,6 +523,17 @@ tr {
     font-weight: bold;
     color: #009879;
 }
+.bkgImg {
+	background-image: url("http://www.charlespetzold.com/blog/2012/12/BezierCircleFigure3.png");
+   background-repeat: no-repeat;
+	background-position: center center;
+	background-size:32px 32px;
+	color: white;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	vertical-align: middle;
+}
 .row {
   margin-left:-5px;
   margin-right:-5px;
