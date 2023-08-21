@@ -488,7 +488,9 @@ th {
   width: 150px;
 }
 tr {
-  height: 50px;
+	width: 180px;
+	height: 55px;
+	box-sizing: border-box;
 }
 .styled-table {
     border-collapse: collapse;
