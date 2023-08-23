@@ -490,14 +490,14 @@ th {
 tr {
 	width: 180px;
 	height: 55px;
-	box-sizing: border-box;
 }
 .styled-table {
-    border-collapse: collapse;
-    margin: 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	border-collapse: collapse;
+	margin: 0;
+	font-size: 0.9em;
+	ont-family: sans-serif;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
 }
 td:nth-child(1) {
 	width: 50px;
