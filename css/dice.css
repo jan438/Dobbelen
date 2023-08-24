@@ -557,4 +557,55 @@
   content: "";
   clear: both;
   display: table;
-} 
+}
+.styled-score {
+	border-collapse: collapse;
+	margin: 0;
+	font-size: 0.9em;
+	font-family: sans-serif;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	box-sizing: border-box;
+}
+.styled-score th {
+  height: 50px;
+  width: 150px;
+}
+.styled-score tr {
+	width: 180px;
+	height: 55px;
+}
+.styled-score td:nth-child(1) {
+	width: 50px;
+}
+.styled-score td:nth-child(2) {
+	width: 10px;
+}
+.styled-score td:nth-child(3) {
+	width: 75px;
+}
+.styled-score thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-score th,
+.styled-score td {
+    padding: 12px 15px;
+}
+.styled-score tbody tr {
+    border-bottom: 1px solid #dddddd;
+    line-height: 5px;
+}
+.styled-score tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.styled-score tbody tr:nth-of-type(odd) {
+    background-color: #f1f1f1;
+}
+.styled-score tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-score tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
