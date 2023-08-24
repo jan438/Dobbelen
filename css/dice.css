@@ -483,14 +483,6 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
-th {
-  height: 50px;
-  width: 150px;
-}
-tr {
-	width: 180px;
-	height: 55px;
-}
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
@@ -499,13 +491,21 @@ tr {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
 }
-td:nth-child(1) {
+.styled-table th {
+  height: 50px;
+  width: 150px;
+}
+.styled-table tr {
+	width: 180px;
+	height: 55px;
+}
+.styled-table td:nth-child(1) {
 	width: 50px;
 }
-td:nth-child(2) {
+.styled-table td:nth-child(2) {
 	width: 10px;
 }
-td:nth-child(3) {
+.styled-table td:nth-child(3) {
 	width: 75px;
 }
 .styled-table thead tr {
