@@ -568,20 +568,11 @@
 }
 .styled-score th {
   height: 50px;
-  width: 150px;
+  width: 90px;
 }
 .styled-score tr {
-	width: 180px;
+	width: 90px;
 	height: 55px;
-}
-.styled-score td:nth-child(1) {
-	width: 50px;
-}
-.styled-score td:nth-child(2) {
-	width: 10px;
-}
-.styled-score td:nth-child(3) {
-	width: 75px;
 }
 .styled-score thead tr {
     background-color: #009879;
@@ -608,4 +599,9 @@
 .styled-score tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+.colscore {
+  float: left;
+  width: 25%;
+  padding: 5px;
 }
