@@ -53,7 +53,7 @@ D7Animator.getImageBank = function(key, baseUrl) {
 			baseUrl = D7Animator.baseUrl;
 		if (typeof baseUrl != "string") baseUrl = "";
 		imageBank.blank = new Image();
-		imageBank.blank.src = baseUrl + "blank.gif";
+		imageBank.blank.src = baseUrl + "green.png";
 		var i;
 		for (i=1; i<7; ++i) {
 			whichDie = "die" + i;
