@@ -346,13 +346,13 @@ D6AnimBuilder.prototype.genDiceHtml = function(layout, callback, callbackData) {
 			++dieCount;
 			if (dieCount > numTotalImgs) break;
 			if (this.useImages) {
-				genHtml += "<img id='" + this.id + dieCount + "' class='die' src='" + this.baseUrl + "blank.gif' />";
+				genHtml += "<img id='" + this.id + dieCount + "' class='die' src='" + this.baseUrl + "green.png' />";
 			} else {
 				genHtml += "<span id='" + this.id + dieCount + "' class='dieNumber'>&nbsp;</span> ";
 			}
 		}
 		genHtml += " <span id='sidebar_" + i + "' class='sidebar'></span>";
-		genHtml += "<h4 id='idhumanheader'>Human Player</h4></div>\n";
+		genHtml += "</div>\n";
 	}
 	return genHtml;
 }
@@ -420,7 +420,6 @@ D6.dice = function(numDice, callback, callbackData) {
 	};
 	var genHtml = "<div id='diceall'>" + builder.genDiceHtml(layout, D6.middleManCallback, middleManData);
 	genHtml += "<div id='diceform'><form><input type='button' id='dicebutton' value='Roll Dice' onclick='D6AnimBuilder.get(\"dice\").reset(); D6AnimBuilder.get(\"dice\").start()' /></form></div>";
-	genHtml += "<input type='submit' value='Score' id='score' onclick='YAHTZEE.scoreResults();' /></div>";
 	D6.genHtml = genHtml;
 	document.write(genHtml);
 }
