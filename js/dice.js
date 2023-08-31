@@ -77,8 +77,8 @@ $(document).ready(function() {
 		else if (number == 5) { rollDice(dice4, 'top'); }
 		else if (number == 6) { rollDice(dice4, 'bottom'); }
 		var element = document.getElementById("dice__scene0");
-		element.style.outline = 'red solid 4px';
-		console.log(element.style.outline);
+		console.log(element.classList);
+		element.classList.add("selected");
 		console.log(element.classList);
 
 		soundEffect();

@@ -7,6 +7,9 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+.selected {
+	outline: #4CAF50 solid 10px;
+}
 @keyframes showSameFont {
   100% {
     transform: translateZ(-35px) rotateY(360deg);
