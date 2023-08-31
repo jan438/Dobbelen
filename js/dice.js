@@ -43,6 +43,9 @@ $(document).ready(function() {
 		if($(this).hasClass("selected")) {
 			$(this).removeClass("selected");
 		}
+		else {
+			$(this).addClass("selected");
+		}
 	});
 
 	$('#dice__btn').on('click ', function() {
