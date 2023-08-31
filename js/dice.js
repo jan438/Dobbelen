@@ -39,6 +39,12 @@ $(document).ready(function() {
 		audio.play();
 	}
 
+	$(".dice__scene").click(function(evt) {
+		if($(this).hasClass("selected")) {
+			$(this).removeClass("selected");
+		}
+	});
+
 	$('#dice__btn').on('click ', function() {
 		var number = randomizeNumber(1, 6);
 
