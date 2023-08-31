@@ -8,6 +8,10 @@ $(document).ready(function() {
   var dice4 = $('#dice__cube4');
   var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
+	$(".dice__scene" ).on("click", function() {
+		$( this ).toggleClass( "selected" );
+	});
+
 	function randomizeNumber(low, high) {
 		var random = Math.floor((Math.random() * high) + low);
 		return random;
@@ -38,15 +42,6 @@ $(document).ready(function() {
 		audio.currentTime = 0;
 		audio.play();
 	}
-
-	$(".dice__scene").click(function(evt) {
-		if($(this).hasClass("selected")) {
-			$(this).removeClass("selected");
-		}
-		else {
-			$(this).addClass("selected");
-		}
-	});
 
 	$('#dice__btn').on('click ', function() {
 		var number = randomizeNumber(1, 6);
