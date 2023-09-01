@@ -88,8 +88,6 @@ $(document).ready(function() {
 		console.log(element.classList);
 		element.classList.add("selected");
 		console.log(element.classList);
-		$("#dice2").css("background-image", "url('./assets/images/dieselected.gif')");
-		document.getElementById("dice1").style.backgroundImage = "url('./assets/images/dieselected.gif')";
 		selectaidice(3);
 
 		soundEffect();
