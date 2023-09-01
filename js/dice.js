@@ -84,6 +84,7 @@ $(document).ready(function() {
 		console.log(element.classList);
 		element.classList.add("selected");
 		console.log(element.classList);
+		document.getElementById("dice1").style.backgroundImage = "url('./assets/images/dieselected.gif')"; 
 
 		soundEffect();
 	});
