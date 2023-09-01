@@ -12,6 +12,10 @@ $(document).ready(function() {
 		$( this ).toggleClass( "selected" );
 	});
 
+	function selectaidice(p) {
+		$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
+	}
+
 	function randomizeNumber(low, high) {
 		var random = Math.floor((Math.random() * high) + low);
 		return random;
@@ -85,7 +89,8 @@ $(document).ready(function() {
 		element.classList.add("selected");
 		console.log(element.classList);
 		$("#dice2").css("background-image", "url('./assets/images/dieselected.gif')");
-		document.getElementById("dice1").style.backgroundImage = "url('./assets/images/dieselected.gif')"; 
+		document.getElementById("dice1").style.backgroundImage = "url('./assets/images/dieselected.gif')";
+		selectaidice(3);
 
 		soundEffect();
 	});
