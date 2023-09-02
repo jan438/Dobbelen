@@ -486,6 +486,12 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
+#uppersec {
+	cursor: pointer;
+}
+#lowersec {
+	cursor: pointer;
+}
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
@@ -493,7 +499,6 @@
 	font-family: sans-serif;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
-	cursor: pointer;
 }
 .styled-table th {
   height: 50px;

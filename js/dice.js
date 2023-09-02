@@ -8,11 +8,19 @@ $(document).ready(function() {
   var dice4 = $('#dice__cube4');
   var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
-	$("table tbody tr").mouseover(function(){
+	$("#uppersec tbody tr").mouseover(function(){
 		$(this).css('background-color','yellow');
 	});
 
-	$("table tbody tr").mouseout(function(){
+	$("#uppersec tbody tr").mouseout(function(){
+		$(this).css('background-color','white');
+	});
+
+	$("#lowersec tbody tr").mouseover(function(){
+		$(this).css('background-color','yellow');
+	});
+
+	$("#lowersec tbody tr").mouseout(function(){
 		$(this).css('background-color','white');
 	});
 
