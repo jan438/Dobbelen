@@ -487,10 +487,10 @@
   background-image: url("../assets/images/dice-5.png");
 }
 #uppersec {
-	cursor: pointer;
+/*	cursor: pointer; */
 }
 #lowersec {
-	cursor: pointer;
+/*	cursor: pointer; */
 }
 .styled-table {
 	border-collapse: collapse;
