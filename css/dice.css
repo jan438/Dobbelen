@@ -486,10 +486,10 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
-#uppersec td:hover, td:active {
+#uppersec td:nth-child(1):hover, td:nth-child(1):active {
 	background-color: yellow;
 }
-#lowersec td:hover, td:active {
+#lowersec td:nth-child(1):hover, td:nth-child(1):active {
 	background-color: yellow;
 }
 .styled-table {
