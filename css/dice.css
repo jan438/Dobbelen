@@ -486,15 +486,12 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
-#uppersec {
-/*	cursor: pointer; */
-}
-#lowersec {
-/*	cursor: pointer; */
-}
-td:hover, td:active {
+#uppersec td:hover, td:active {
 	background-color: yellow;
- }
+}
+#lowersec td:hover, td:active {
+	background-color: yellow;
+}
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
