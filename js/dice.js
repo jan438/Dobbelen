@@ -8,21 +8,17 @@ $(document).ready(function() {
   var dice4 = $('#dice__cube4');
   var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
-//	$("#uppersec tbody tr").mouseover(function(){
-//		$(this).css('background-color','yellow');
-//	});
+	$('#uppersec tbody td:nth-child(1)').click(function() {
+		alert("HTML: " +$(this).html());
+		alert("Cell Index: " + $(this).index());
+		alert("Row Index: " + $(this).closest('tr').index());
+	});
 
-//	$("#uppersec tbody tr").mouseout(function(){
-//		$(this).css('background-color','white');
-//	});
-
-//	$("#lowersec tbody tr").mouseover(function(){
-//		$(this).css('background-color','yellow');
-//	});
-
-//	$("#lowersec tbody tr").mouseout(function(){
-//		$(this).css('background-color','white');
-//	});
+	$('#lowersec tbody td:nth-child(1)').click(function() {
+		alert("HTML: " +$(this).html());
+		alert("Cell Index: " + $(this).index());
+		alert("Row Index: " + $(this).closest('tr').index());
+	});
 
 	$(".dice__scene" ).on("click", function() {
 		$( this ).toggleClass( "selected" );
