@@ -15,9 +15,7 @@ $(document).ready(function() {
 	});
 
 	$('#lowersec tbody td:nth-child(1)').click(function() {
-		alert("HTML: " +$(this).html());
-		alert("Cell Index: " + $(this).index());
-		alert("Row Index: " + $(this).closest('tr').index());
+		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
 	});
 
 	$(".dice__scene" ).on("click", function() {
