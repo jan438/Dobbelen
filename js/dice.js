@@ -11,9 +11,7 @@ $(document).ready(function() {
 	document.getElementById("dicebutton").click();
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
-		alert("HTML: " +$(this).html());
-		alert("Cell Index: " + $(this).index());
-		alert("Row Index: " + $(this).closest('tr').index());
+		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index()); 
 	});
 
 	$('#lowersec tbody td:nth-child(1)').click(function() {
