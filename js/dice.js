@@ -8,6 +8,8 @@ $(document).ready(function() {
   var dice4 = $('#dice__cube4');
   var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
+	document.getElementById("dicebutton").click();
+
 	$('#uppersec tbody td:nth-child(1)').click(function() {
 		alert("HTML: " +$(this).html());
 		alert("Cell Index: " + $(this).index());
