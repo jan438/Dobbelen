@@ -492,6 +492,9 @@
 #lowersec {
 /*	cursor: pointer; */
 }
+td:hover, td:active {
+	background-color: yellow;
+ }
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
