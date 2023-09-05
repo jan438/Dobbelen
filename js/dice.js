@@ -8,7 +8,12 @@ $(document).ready(function() {
   var dice4 = $('#dice__cube4');
   var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
+	$("#diceform").hide();
 	document.getElementById("dicebutton").click();
+	setTimeout(function() {
+		$('#dicebutton').trigger('click');
+	}, 10000);
+
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
 		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
