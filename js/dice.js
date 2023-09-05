@@ -18,6 +18,8 @@ $(document).ready(function() {
 
 	$('#lowersec tbody td:nth-child(1)').click(function() {
 		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+		$(this).removeClass('active-row');
+		$(this).parent().addClass('active-row');
 	});
 
 	$(".dice__scene" ).on("click", function() {
