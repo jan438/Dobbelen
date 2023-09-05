@@ -542,6 +542,7 @@
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+    background-color: orange;
 }
 .bkgImg {
 	background-image: url("http://www.charlespetzold.com/blog/2012/12/BezierCircleFigure3.png");
