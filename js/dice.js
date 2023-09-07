@@ -1,12 +1,14 @@
 
 $(document).ready(function() {
-  var history = [];
-  var dice0 = $('#dice__cube0');
-  var dice1 = $('#dice__cube1');
-  var dice2 = $('#dice__cube2');
-  var dice3 = $('#dice__cube3');
-  var dice4 = $('#dice__cube4');
-  var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
+	var hmturncount = 0;
+	var hmrollcount = 0;
+	var history = [];
+	var dice0 = $('#dice__cube0');
+	var dice1 = $('#dice__cube1');
+	var dice2 = $('#dice__cube2');
+	var dice3 = $('#dice__cube3');
+	var dice4 = $('#dice__cube4');
+	var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
 	$("#diceform").hide();
 	document.getElementById("dicebutton").click();
