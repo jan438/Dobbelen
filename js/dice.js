@@ -110,6 +110,7 @@ $(document).ready(function() {
 		element.classList.add("selected");
 		console.log(element.classList);
 		selectaidice(3);
+		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
 		soundEffect();
 	});
