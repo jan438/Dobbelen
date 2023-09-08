@@ -93,9 +93,7 @@ D6Animator.prototype.start = function(result) {
 	} else {
 		var sequence = [];
 		var state = "top";
-		var classlist = JSON.stringify(targetElem.classList);
-		var pos = classlist.indexOf("selected");
-		if (pos < 0) {
+		if (true) {
 			this.hold = false;
 			if (!result || result < 1 || result > 6) result = this.randomBaseOne(6);
 			var sequence = [];
