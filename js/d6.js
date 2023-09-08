@@ -95,6 +95,7 @@ D6Animator.prototype.start = function(result) {
 		var state = "top";
 		var classlist = JSON.stringify(targetElem.classList);
 		console.log("Classlist " + this.id + " " + classlist);
+		console.log($("#dice1").css("background-image"));
 		if (true) {
 			this.hold = false;
 			if (!result || result < 1 || result > 6) result = this.randomBaseOne(6);

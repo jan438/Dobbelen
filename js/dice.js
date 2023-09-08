@@ -109,7 +109,13 @@ $(document).ready(function() {
 		console.log(element.classList);
 		element.classList.add("selected");
 		console.log(element.classList);
+
+		selectaidice(1);
+		selectaidice(2);
 		selectaidice(3);
+		selectaidice(4);
+		selectaidice(5);
+
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
 		soundEffect();
