@@ -14,7 +14,7 @@ $(document).ready(function() {
 	document.getElementById("dicebutton").click();
 	setTimeout(function() {
 		$('#dicebutton').trigger('click');
-	}, 10000);
+	}, 30000);
 
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
