@@ -11,6 +11,12 @@ $(document).ready(function() {
 	var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 
 	$("#diceform").hide();
+	$("#dice1").css("background-image", "url('./assets/images/blank.gif')");
+	$("#dice2").css("background-image", "url('./assets/images/blank.gif')");
+	$("#dice3").css("background-image", "url('./assets/images/blank.gif')");
+	$("#dice4").css("background-image", "url('./assets/images/blank.gif')");
+	$("#dice5").css("background-image", "url('./assets/images/blank.gif')");
+
 	document.getElementById("dicebutton").click();
 	setTimeout(function() {
 		$('#dicebutton').trigger('click');
