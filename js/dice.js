@@ -43,6 +43,10 @@ $(document).ready(function() {
 		$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
 	}
 
+	function deselectaidice(p) {
+		$("#dice"+ p).css("background-image", "url('./assets/images/green.png')");
+	}
+
 	function randomizeNumber(low, high) {
 		var random = Math.floor((Math.random() * high) + low);
 		return random;
@@ -117,9 +121,9 @@ $(document).ready(function() {
 		console.log(element.classList);
 
 		selectaidice(1);
-		selectaidice(2);
+		deselectaidice(2);
 		selectaidice(3);
-		selectaidice(4);
+		deselectaidice(4);
 		selectaidice(5);
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
