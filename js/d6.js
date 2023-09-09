@@ -93,7 +93,9 @@ D6Animator.prototype.start = function(result) {
 	} else {
 		var sequence = [];
 		var state = "top";
-		console.log($("#dice1").css("background-image"));
+		if (this.id == "dice1") {
+			console.log($("#dice1").css("background-image"));
+		}
 		if (true) {
 			this.hold = false;
 			if (!result || result < 1 || result > 6) result = this.randomBaseOne(6);
