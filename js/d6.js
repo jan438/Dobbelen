@@ -95,7 +95,7 @@ D6Animator.prototype.start = function(result) {
 		var bgimage;
 		var state = "top";
 		if (this.id == "dice1") {
-			bgimage = $("#dice1").css("background-image");
+			bgimage = $("#" + this.id).css("background-image");
 		}
 		if (this.id == "dice2") {
 			bgimage = $("#dice2").css("background-image");
