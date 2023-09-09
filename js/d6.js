@@ -92,9 +92,22 @@ D6Animator.prototype.start = function(result) {
 		this.nope("Debug: The tag with specified id (" + this.id + ") was not found in the document.");
 	} else {
 		var sequence = [];
+		var bgimage;
 		var state = "top";
 		if (this.id == "dice1") {
-			console.log($("#dice1").css("background-image"));
+			bgimage = $("#dice1").css("background-image");
+		}
+		if (this.id == "dice2") {
+			bgimage = $("#dice2").css("background-image");
+		}
+		if (this.id == "dice3") {
+			bgimage = $("#dice3").css("background-image");
+		}
+		if (this.id == "dice4") {
+			bgimage = $("#dice4").css("background-image");
+		}
+		if (this.id == "dice5") {
+			bgimage = $("#dice5").css("background-image");
 		}
 		if (true) {
 			this.hold = false;
