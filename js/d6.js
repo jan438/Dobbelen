@@ -96,7 +96,7 @@ D6Animator.prototype.start = function(result) {
 		var imgend = bgimage.slice(-3,-2);
 		console.log("Background-image length: " + bgimage.length + " " + imgend);
 		var state = "top";
-		if (true) {
+		if (imgend === "g") {
 			this.hold = false;
 			if (!result || result < 1 || result > 6) result = this.randomBaseOne(6);
 			var sequence = [];
