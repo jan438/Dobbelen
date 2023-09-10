@@ -40,11 +40,19 @@ $(document).ready(function() {
 	});
 
 	function selectaidice(p) {
-		$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
+		var bgimage = $("#dice" + p).css("background-image");
+		var imgend = bgimage.slice(-3,-2);
+		if (imgend === "g") {
+			$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
+		}
 	}
 
 	function deselectaidice(p) {
-		$("#dice"+ p).css("background-image", "url('./assets/images/green.png')");
+		var bgimage = $("#dice" + p).css("background-image");
+		var imgend = bgimage.slice(-3,-2);
+		if (imgend === "f") {
+			$("#dice"+ p).css("background-image", "url('./assets/images/green.png')");
+		}
 	}
 
 	function randomizeNumber(low, high) {
