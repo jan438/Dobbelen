@@ -93,6 +93,8 @@ D6Animator.prototype.start = function(result) {
 	} else {
 		var sequence = [];
 		var bgimage = $("#" + this.id).css("background-image");
+		var imgend = bgimage.slice(-3);
+		console.log("Background-image length: " + bgimage.length + " " + imgend);
 		var state = "top";
 		if (true) {
 			this.hold = false;
