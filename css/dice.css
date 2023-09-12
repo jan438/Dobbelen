@@ -1,4 +1,8 @@
 
+@font-face {
+    font-family: "Alice Regular";
+    src: url(../../fonts/Alice-Regular.ttf) format("truetype");
+}
 .dice__scene {
   width: 70px;
   height: 70px;
@@ -495,10 +499,11 @@
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
-	font-size: 0.9em;
-	font-family: sans-serif;
+	font-size: 25px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
+	font-family: "Alice Regular";
+	font-weight: 900;
 }
 .styled-table th {
   height: 50px;
