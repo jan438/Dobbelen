@@ -422,7 +422,7 @@ D6.dice = function(numDice, callback, callbackData) {
 	var genHtml = "<div id='diceall'>" + builder.genDiceHtml(layout, D6.middleManCallback, middleManData);
 	genHtml += "<div id='diceform'><form><input type='button' id='dicebutton' value='Roll Dice' onclick='D6AnimBuilder.get(\"dice\").reset(); D6AnimBuilder.get(\"dice\").start()' /></form></div>";
 	D6.genHtml = genHtml;
-	document.write(genHtml);
+	document.getElementById('smalldices').innerHTML = genHtml;
 }
 
 D6.middleManCallback = function(middleManData) {
