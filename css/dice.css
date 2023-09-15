@@ -1,7 +1,7 @@
 
 @font-face {
-    font-family: "Alice Regular";
-    src: url(../../fonts/Alice-Regular.ttf) format("truetype");
+	font-family: "Myfont";
+	src: url("ArianaVioleta.ttf") format("truetype");
 }
 .dice__scene {
   width: 70px;
@@ -502,7 +502,7 @@
 	font-size: 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
-	font-family: "Alice Regular";
+	font-family: "Myfont";
 	font-weight: 900;
 }
 .styled-table th {
