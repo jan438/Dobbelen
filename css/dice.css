@@ -3,7 +3,7 @@
 	font-family: "HeaderFont";
 	src: url("ArianaVioleta.ttf") format("truetype");
 }
-font-face {
+@font-face {
 	font-family: "DigitsFont";
 	src: url(""Alice-Regular.ttf) format("truetype");
 }
@@ -503,13 +503,13 @@ font-face {
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
-	font-size: 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
 }
 .styled-table th {
 	font-family: "HeaderFont";
 	font-weight: 900;
+	font-size: 32px;
 	height: 50px;
 	width: 175px;
 }
@@ -518,16 +518,23 @@ font-face {
 	height: 55px;
 }
 .styled-table td:nth-child(1) {
+	font-family: "DigitsFont";
+	font-weight: 900;
+	font-size: 18px;
+	width: 55px;
+
 	width: 65px;
 }
 .styled-table td:nth-child(2) {
 	font-family: "DigitsFont";
 	font-weight: 900;
+	font-size: 20px;
 	width: 55px;
 }
 .styled-table td:nth-child(3) {
 	font-family: "DigitsFont";
 	font-weight: 900;
+	font-size: 20px;
 	width: 55px;
 }
 .styled-table thead tr {
@@ -553,7 +560,6 @@ font-face {
     border-bottom: 2px solid #009879;
 }
 .styled-table tbody tr.active-row {
-    font-weight: bold;
     color: #009879;
     background-color: orange;
 }
@@ -591,6 +597,7 @@ font-face {
 .styled-score th {
 	font-family: "HeaderFont";
 	font-weight: 900;
+	font-size: 30px;
 	height: 50px;
 	width: 90px;
 }
@@ -614,6 +621,7 @@ font-face {
 	border-bottom: 2px solid #009879;
 	font-family: "DigitsFont";
 	font-weight: 900;
+	font-size: 20px;
 }
 .colscore {
   float: left;
