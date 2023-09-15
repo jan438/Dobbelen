@@ -5,7 +5,7 @@
 }
 @font-face {
 	font-family: "DigitsFont";
-	src: url(""Alice-Regular.ttf) format("truetype");
+	src: url("Alice-Regular.ttf") format("truetype");
 }
 .dice__scene {
   width: 70px;
