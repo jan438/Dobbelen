@@ -1,7 +1,11 @@
 
 @font-face {
-	font-family: "Myfont";
+	font-family: "HeaderFont";
 	src: url("ArianaVioleta.ttf") format("truetype");
+}
+font-face {
+	font-family: "DigitsFont";
+	src: url(""Alice-Regular.ttf) format("truetype");
 }
 .dice__scene {
   width: 70px;
@@ -502,12 +506,12 @@
 	font-size: 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
-	font-family: "Myfont";
-	font-weight: 900;
 }
 .styled-table th {
-  height: 50px;
-  width: 175px;
+	font-family: "HeaderFont";
+	font-weight: 900;
+	height: 50px;
+	width: 175px;
 }
 .styled-table tr {
 	width: 180px;
@@ -517,9 +521,13 @@
 	width: 65px;
 }
 .styled-table td:nth-child(2) {
+	font-family: "DigitsFont";
+	font-weight: 900;
 	width: 55px;
 }
 .styled-table td:nth-child(3) {
+	font-family: "DigitsFont";
+	font-weight: 900;
 	width: 55px;
 }
 .styled-table thead tr {
@@ -579,12 +587,12 @@
 	font-size: 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	box-sizing: border-box;
-	font-family: "Myfont";
-	font-weight: 900;
 }
 .styled-score th {
-  height: 50px;
-  width: 90px;
+	font-family: "HeaderFont";
+	font-weight: 900;
+	height: 50px;
+	width: 90px;
 }
 .styled-score tr {
 	width: 90px;
@@ -604,6 +612,8 @@
 	background-color: #f1f1f1;
 	line-height: 5px;
 	border-bottom: 2px solid #009879;
+	font-family: "DigitsFont";
+	font-weight: 900;
 }
 .colscore {
   float: left;
