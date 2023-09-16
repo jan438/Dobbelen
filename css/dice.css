@@ -608,10 +608,6 @@
 	color: #ffffff;
 	text-align: left;
 }
-.styled-score th,
-.styled-score td {
-	padding: 12px 15px;
-}
 .styled-score td {
 	width: 45px;
 }
@@ -626,6 +622,6 @@
 }
 .colscore {
   float: left;
-  width: 25%;
+  width: 90px;
   padding: 5px;
 }
