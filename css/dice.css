@@ -537,7 +537,7 @@
 }
 .styled-table thead tr {
     background-color: #009879;
-    color: #ffffff;
+    color: #FF8C00;
     text-align: left;
 }
 .styled-table th,
@@ -607,7 +607,7 @@
 }
 .styled-score thead tr {
 	background-color: #009879;
-	color: #ffffff;
+	color: #FF8C00;
 	text-align: left;
 }
 .styled-score td {
