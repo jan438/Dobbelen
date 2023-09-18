@@ -35,6 +35,14 @@ $(document).ready(function() {
 		$(this).parent().addClass('active-row');
 	});
 
+	$('#uppersec tbody td:nth-child(2)').click(function() {
+		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+	});
+
+	$('#lowersec tbody td:nth-child(2)').click(function() {
+		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+	});
+
 	$(".dice__scene" ).on("click", function() {
 		$( this ).toggleClass( "selected" );
 	});
