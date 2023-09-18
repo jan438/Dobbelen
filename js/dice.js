@@ -24,23 +24,23 @@ $(document).ready(function() {
 
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
-		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 		$('tr').removeClass('active-row');
 		$(this).parent().addClass('active-row');
 	});
 
 	$('#lowersec tbody td:nth-child(1)').click(function() {
-		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 		$('tr').removeClass('active-row');
 		$(this).parent().addClass('active-row');
 	});
 
 	$('#uppersec tbody td:nth-child(2)').click(function() {
-		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 	});
 
 	$('#lowersec tbody td:nth-child(2)').click(function() {
-		console.log("HTML" + $(this).html() + "Cell Index:" + $(this).index() + "Row Index:" + $(this).closest('tr').index());
+		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 	});
 
 	$(".dice__scene" ).on("click", function() {
