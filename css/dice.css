@@ -505,16 +505,15 @@
 	margin: 0;
 	box-shadow: 0 0 20px #ffff94;
 	box-sizing: border-box;
+	width: 190px;
 }
 .styled-table th {
 	font-family: "HeaderFont";
 	font-weight: 900;
 	font-size: 32px;
 	height: 50px;
-	width: 175px;
 }
 .styled-table tr {
-	width: 180px;
 	height: 55px;
 }
 .styled-table td:nth-child(1) {
@@ -577,7 +576,6 @@
 }
 .column {
   float: left;
-  width: 50%;
   padding: 5px;
 }
 .row::after {
@@ -625,6 +623,5 @@
 }
 .colscore {
   float: left;
-  width: 90px;
   padding: 5px;
 }
