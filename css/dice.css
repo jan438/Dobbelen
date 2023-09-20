@@ -520,19 +520,19 @@
 	font-family: "DigitsFont";
 	font-weight: 900;
 	font-size: 18px;
-	width: 65px;
+	width: 70px;
 }
 .styled-table td:nth-child(2) {
 	font-family: "DigitsFont";
 	font-weight: 900;
 	font-size: 25px;
-	width: 55px;
+	width: 60px;
 }
 .styled-table td:nth-child(3) {
 	font-family: "DigitsFont";
 	font-weight: 900;
 	font-size: 25px;
-	width: 55px;
+	width: 60px;
 }
 .styled-table thead tr {
 	background-color: #009879;
