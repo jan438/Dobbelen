@@ -535,9 +535,10 @@
 	width: 55px;
 }
 .styled-table thead tr {
-    background-color: #009879;
-    color: #FF8C00;
-    text-align: left;
+	background-color: #009879;
+	color: #FF8C00;
+	text-align: center;
+	vertical-align: middle;
 }
 .styled-table th,
 .styled-table td {
