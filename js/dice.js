@@ -47,6 +47,29 @@ $(document).ready(function() {
 		$( this ).toggleClass( "selected" );
 	});
 
+  var counter = 0;
+  var blinking;
+
+  function blinker() {
+    $('#arrow-left-blink').fadeOut(500);
+    $('#arrow-left-blink').fadeIn(500);
+    blinker();
+  }
+
+  $("#arrow-left").click(function() {
+    counter++;
+    if (counter % 2 == 1) {
+      $('#arrow-left-blink').css("visibility", "visible");
+      blinking = setTimeout(function() {
+        blinker();
+      }, 1000);
+    } else {
+      clearInterval(blinking);
+      $('#arrow-left-blink').css("visibility", "hidden");
+    }
+  });
+
+
 	function selectaidice(p) {
 		var bgimage = $("#dice" + p).css("background-image");
 		var imgend = bgimage.slice(-3,-2);
