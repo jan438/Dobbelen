@@ -503,7 +503,7 @@
 .styled-table {
 	border-collapse: collapse;
 	margin: 0;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 20px #ffff94;
 	box-sizing: border-box;
 }
 .styled-table th {
@@ -588,7 +588,7 @@
 .styled-score {
 	border-collapse: collapse;
 	margin: 0;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 20px #ffff94;
 	box-sizing: border-box;
 }
 .styled-score th {
