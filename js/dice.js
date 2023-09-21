@@ -49,21 +49,22 @@ $(document).ready(function() {
 	});
 
 	function blinker() {
-		$('#turnhm1').fadeOut(500);
-		$('#turnhm1').fadeIn(500);
-		blinker();
+		for (let i = 0; i < 5; i++) {
+			$('#turnhm1').fadeOut(500);
+			$('#turnhm1').fadeIn(500);
+		}
 	}
 
 	$("#arrow-left").click(function() {
 		counter++;
 		if (counter % 2 == 1) {
-			$('#turnhm1').css("visibility", "visible");
+			$('#turnhm1').css("background-color", "red");
 			blinking = setTimeout(function() {
 				blinker();
 			}, 1000);
 		} else {
 			clearInterval(blinking);
-			$('#turnhm1').css("visibility", "hidden");
+			$('#turnhm1').css("background-color", "yellow");
 		}
 	});
 
