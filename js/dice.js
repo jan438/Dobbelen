@@ -9,6 +9,8 @@ $(document).ready(function() {
 	var dice3 = $('#dice__cube3');
 	var dice4 = $('#dice__cube4');
 	var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
+	var counter = 0;
+	var blinking;
 
 	$("#diceform").hide();
 	$("#dice1").css("background-image", "url('./assets/images/green.png')");
@@ -21,7 +23,6 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$('#dicebutton').trigger('click');
 	}, 30000);
-
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
 		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
@@ -47,27 +48,24 @@ $(document).ready(function() {
 		$( this ).toggleClass( "selected" );
 	});
 
-  var counter = 0;
-  var blinking;
+	function blinker() {
+		$('#turnhm1').fadeOut(500);
+		$('#turnhm1').fadeIn(500);
+		blinker();
+	}
 
-  function blinker() {
-    $('#arrow-left-blink').fadeOut(500);
-    $('#arrow-left-blink').fadeIn(500);
-    blinker();
-  }
-
-  $("#arrow-left").click(function() {
-    counter++;
-    if (counter % 2 == 1) {
-      $('#arrow-left-blink').css("visibility", "visible");
-      blinking = setTimeout(function() {
-        blinker();
-      }, 1000);
-    } else {
-      clearInterval(blinking);
-      $('#arrow-left-blink').css("visibility", "hidden");
-    }
-  });
+	$("#arrow-left").click(function() {
+		counter++;
+		if (counter % 2 == 1) {
+			$('#turnhm1').css("visibility", "visible");
+			blinking = setTimeout(function() {
+				blinker();
+			}, 1000);
+		} else {
+			clearInterval(blinking);
+			$('#turnhm1').css("visibility", "hidden");
+		}
+	});
 
 
 	function selectaidice(p) {
