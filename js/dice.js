@@ -48,26 +48,25 @@ $(document).ready(function() {
 		$( this ).toggleClass( "selected" );
 	});
 
-	function blinker() {
-		for (let i = 0; i < 5; i++) {
-			$('#turnhm1').fadeOut(500);
-			$('#turnhm1').fadeIn(500);
-		}
-	}
-
-	$("#switch-turnind").click(function() {
+	function switchturnind() {
 		counter++;
 		if (counter % 2 == 1) {
 			$('#turnhm1').css("background-color", "red");
 			blinking = setTimeout(function() {
-				blinker();
+				for (let i = 0; i < 5; i++) {
+					$('#turnhm1').fadeOut(500);
+					$('#turnhm1').fadeIn(500);
+				}
 			}, 1000);
 		} else {
 			clearInterval(blinking);
 			$('#turnhm1').css("background-color", "yellow");
 		}
-	});
+	}
 
+	$("#switch-turnind").click(function() {
+		switchturnind();
+	});
 
 	function selectaidice(p) {
 		var bgimage = $("#dice" + p).css("background-image");
