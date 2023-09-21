@@ -64,10 +64,6 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#switch-turnind").click(function() {
-		switchturnind();
-	});
-
 	function selectaidice(p) {
 		var bgimage = $("#dice" + p).css("background-image");
 		var imgend = bgimage.slice(-3,-2);
@@ -162,6 +158,7 @@ $(document).ready(function() {
 		selectaidice(3);
 		deselectaidice(4);
 		selectaidice(5);
+		switchturnind();
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
