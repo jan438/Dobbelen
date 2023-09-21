@@ -48,19 +48,19 @@ $(document).ready(function() {
 		$( this ).toggleClass( "selected" );
 	});
 
-	function switchturnind() {
+	function switchturnhmind(p) {
 		counter++;
 		if (counter % 2 == 1) {
-			$('#turnhm1').css("background-color", "red");
+			$('#turnhm' + p).css("background-color", "red");
 			blinking = setTimeout(function() {
 				for (let i = 0; i < 5; i++) {
-					$('#turnhm1').fadeOut(500);
-					$('#turnhm1').fadeIn(500);
+					$('#turnhm' + p).fadeOut(500);
+					$('#turnhm' + p).fadeIn(500);
 				}
 			}, 1000);
 		} else {
 			clearInterval(blinking);
-			$('#turnhm1').css("background-color", "yellow");
+			$('#turnhm' + p).css("background-color", "yellow");
 		}
 	}
 
@@ -158,7 +158,7 @@ $(document).ready(function() {
 		selectaidice(3);
 		deselectaidice(4);
 		selectaidice(5);
-		switchturnind();
+		switchturnhmind(1);
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
