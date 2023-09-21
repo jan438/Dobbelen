@@ -55,7 +55,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#arrow-left").click(function() {
+	$("#switch-turnind").click(function() {
 		counter++;
 		if (counter % 2 == 1) {
 			$('#turnhm1').css("background-color", "red");
