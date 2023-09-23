@@ -49,19 +49,9 @@ $(document).ready(function() {
 	});
 
 	function switchturnhmind(p) {
-		counter++;
-		if (counter % 2 == 1) {
-			$('#turnhm' + p).css("background-color", "red");
-			blinking = setTimeout(function() {
-				for (let i = 0; i < 5; i++) {
-					$('#turnhm' + p).fadeOut(500);
-					$('#turnhm' + p).fadeIn(500);
-				}
-			}, 1000);
-		} else {
-			clearInterval(blinking);
-			$('#turnhm' + p).css("background-color", "yellow");
-		}
+		$('#turnhm' + p).css("background-color", "yellow");
+		$("#turnhm" + p).fadeOut(1);
+		$("#turnhm" + p).fadeIn(10000);
 	}
 
 	function selectaidice(p) {
