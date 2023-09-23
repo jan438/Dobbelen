@@ -9,8 +9,8 @@ $(document).ready(function() {
 	var dice3 = $('#dice__cube3');
 	var dice4 = $('#dice__cube4');
 	var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
-	var counter = 0;
-	var blinking;
+	var turncounter = 0;
+	var val;
 
 	$("#diceform").hide();
 	$("#dice1").css("background-image", "url('./assets/images/green.png')");
@@ -52,6 +52,7 @@ $(document).ready(function() {
 		$('#turnhm' + p).css("background-color", "yellow");
 		$("#turnhm" + p).fadeOut(0.5);
 		$("#turnhm" + p).fadeIn(5000);
+		turncounter++;
 	}
 
 	function selectaidice(p) {
@@ -148,7 +149,16 @@ $(document).ready(function() {
 		selectaidice(3);
 		deselectaidice(4);
 		selectaidice(5);
-		switchturnhmind(2);
+		val = (turncounter % 3);
+		switch( val ) {
+			case 0: switchturnhmind(1);
+			break;
+			case 1: switchturnhmind(2);
+			break;
+			case 2: switchturnhmind(3);
+			break;
+			default:
+		}
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
