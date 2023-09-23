@@ -50,8 +50,8 @@ $(document).ready(function() {
 
 	function switchturnhmind(p) {
 		$('#turnhm' + p).css("background-color", "yellow");
-		$("#turnhm" + p).fadeOut(1);
-		$("#turnhm" + p).fadeIn(10000);
+		$("#turnhm" + p).fadeOut(0.5);
+		$("#turnhm" + p).fadeIn(5000);
 	}
 
 	function selectaidice(p) {
@@ -148,7 +148,7 @@ $(document).ready(function() {
 		selectaidice(3);
 		deselectaidice(4);
 		selectaidice(5);
-		switchturnhmind(1);
+		switchturnhmind(2);
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
