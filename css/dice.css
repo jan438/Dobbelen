@@ -494,6 +494,20 @@
   transform: rotateX(-90deg) translateZ(35px);
   background-image: url("../assets/images/dice-5.png");
 }
+.blink {
+	animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 #uppersec td:nth-child(1):hover {
 	background-color: yellow;
 }
