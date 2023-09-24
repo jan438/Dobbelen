@@ -54,6 +54,12 @@ $(document).ready(function() {
 		$("#turnhm" + p).fadeIn(5000);
 		turncounter++;
 	}
+	function switchturnaiind(p) {
+		$('#turnai' + p).css("background-color", "yellow");
+		$("#turnai" + p).fadeOut(0.5);
+		$("#turnai" + p).fadeIn(5000);
+		turncounter++;
+	}
 
 	function selectaidice(p) {
 		var bgimage = $("#dice" + p).css("background-image");
@@ -149,7 +155,7 @@ $(document).ready(function() {
 		selectaidice(3);
 		deselectaidice(4);
 		selectaidice(5);
-		val = (turncounter % 3);
+		val = (turncounter % 6);
 		switch( val ) {
 			case 0: switchturnhmind(1);
 			break;
@@ -157,6 +163,12 @@ $(document).ready(function() {
 			break;
 			case 2: switchturnhmind(3);
 			break;
+			case 3: switchturnaiind(1);
+			break;
+			case 4: switchturnaiind(2);
+			break;
+			case 5: switchturnaiind(3);
+			break
 			default:
 		}
 
