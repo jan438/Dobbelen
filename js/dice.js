@@ -171,6 +171,8 @@ $(document).ready(function() {
 			break
 			default:
 		}
+		var results = [];
+		YAHTZEE.findCombinations(results);
 
 		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
 
