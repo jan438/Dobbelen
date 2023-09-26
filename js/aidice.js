@@ -5,7 +5,7 @@ var airesults = [];
 YAHTZEE.info = {};
 YAHTZEE.callback = function(total, info, results) {
 	airesults = results;
-//	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
+	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
 }
 YAHTZEE.findCombinations = function(results) {
