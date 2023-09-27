@@ -7,9 +7,22 @@ YAHTZEE.callback = function(total, info, results) {
 	airesults = results;
 	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
+	YAHTZEE.findCombinations(results);
 }
 YAHTZEE.findCombinations = function(results) {
 	console.log("Findcombination: " + results);
+	var equals = new Array(0,0,0,0,0,0);
+	var combis = new Array(0,0,0,0,0,0);
+	for (let i = 0; i < 6; i++) {
+		if (i < 6) {
+			combis[i] = results[i];
+		}
+		if ((i > 0) && (combis[i-1] == combis[i])) {
+			++equals[combis[i] - 1];
+		}
+	}
+	console.log(equals);
+	return equals;
 }
 YAHTZEE.sort_results = function(results) {
   var sorted = results;
