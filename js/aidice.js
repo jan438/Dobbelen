@@ -14,6 +14,10 @@ YAHTZEE.callback = function(total, info, results) {
 	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
 	YAHTZEE.findCombinations(results);
+	var mask = 0;
+	for (let i = 0; i < 5; i++) {
+		mask = mask | (1 << (results[i] - 1));
+	}
 }
 YAHTZEE.findCombinations = function(results) {
 	console.log("Findcombination: " + results);
