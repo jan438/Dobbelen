@@ -11,6 +11,8 @@ $(document).ready(function() {
 	var animationSpeed = dice0.css('transition-duration').split(',')[0].replace(/[^-\d\.]/g, '') * 1000;
 	var turncounter = 0;
 	var val;
+	var hmresults = [0,0,0,0,0];
+	var hmdicetabel = [1,6,4,3,2,5];
 
 	$("#diceform").hide();
 	$("#dice1").css("background-image", "url('./assets/images/green.png')");
@@ -25,23 +27,23 @@ $(document).ready(function() {
 	}, 30000);
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
-		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
+//		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 		$('tr').removeClass('active-row');
 		$(this).parent().addClass('active-row');
 	});
 
 	$('#lowersec tbody td:nth-child(1)').click(function() {
-		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
+//		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 		$('tr').removeClass('active-row');
 		$(this).parent().addClass('active-row');
 	});
 
 	$('#uppersec tbody td:nth-child(2)').click(function() {
-		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
+//		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 	});
 
 	$('#lowersec tbody td:nth-child(2)').click(function() {
-		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
+//		console.log("Lower HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
 	});
 
 	$(".dice__scene" ).on("click", function() {
@@ -117,6 +119,7 @@ $(document).ready(function() {
 		else if (number == 4) { rollDice(dice0,'left'); }
 		else if (number == 5) { rollDice(dice0, 'top'); }
 		else if (number == 6) { rollDice(dice0, 'bottom'); }
+		hmresults[0] = hmdicetabel[number-1];
 		number = randomizeNumber(1, 6);
 		if (number == 1) { rollDice(dice1, 'front'); }
 		else if (number == 2) { rollDice(dice1, 'back'); }
@@ -124,6 +127,7 @@ $(document).ready(function() {
 		else if (number == 4) { rollDice(dice1,'left'); }
 		else if (number == 5) { rollDice(dice1, 'top'); }
 		else if (number == 6) { rollDice(dice1, 'bottom'); }
+		hmresults[1] = hmdicetabel[number-1];
 		number = randomizeNumber(1, 6);
 		if (number == 1) { rollDice(dice2, 'front'); }
 		else if (number == 2) { rollDice(dice2, 'back'); }
@@ -131,6 +135,7 @@ $(document).ready(function() {
 		else if (number == 4) { rollDice(dice2,'left'); }
 		else if (number == 5) { rollDice(dice2, 'top'); }
 		else if (number == 6) { rollDice(dice2, 'bottom'); }
+		hmresults[2] = hmdicetabel[number-1];
 		number = randomizeNumber(1, 6);
 		if (number == 1) { rollDice(dice3, 'front'); }
 		else if (number == 2) { rollDice(dice3, 'back'); }
@@ -138,6 +143,7 @@ $(document).ready(function() {
 		else if (number == 4) { rollDice(dice3,'left'); }
 		else if (number == 5) { rollDice(dice3, 'top'); }
 		else if (number == 6) { rollDice(dice3, 'bottom'); }
+		hmresults[3] = hmdicetabel[number-1];
 		number = randomizeNumber(1, 6);
 		if (number == 1) { rollDice(dice4, 'front'); }
 		else if (number == 2) { rollDice(dice4, 'back'); }
@@ -145,10 +151,12 @@ $(document).ready(function() {
 		else if (number == 4) { rollDice(dice4,'left'); }
 		else if (number == 5) { rollDice(dice4, 'top'); }
 		else if (number == 6) { rollDice(dice4, 'bottom'); }
+		hmresults[4] = hmdicetabel[number-1];
+		console.log("Human results: " + hmresults);
 		var element = document.getElementById("dice__scene0");
-		console.log(element.classList);
+//		console.log(element.classList);
 		element.classList.add("selected");
-		console.log(element.classList);
+//		console.log(element.classList);
 
 		selectaidice(1);
 		deselectaidice(2);

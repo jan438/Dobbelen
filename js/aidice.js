@@ -47,7 +47,7 @@ var LARGE_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4) + (1 << 5);
 
 YAHTZEE.callback = function(total, info, results) {
 	airesults = results;
-	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
+//	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
 	YAHTZEE.findCombinations(results);
 	var mask = 0;
@@ -69,7 +69,7 @@ YAHTZEE.callback = function(total, info, results) {
 	}
 }
 YAHTZEE.findCombinations = function(results) {
-	console.log("Findcombination: " + results);
+//	console.log("Findcombination: " + results);
 	var equals = new Array(0,0,0,0,0,0);
 	var combis = new Array(0,0,0,0,0,0);
 	for (let i = 0; i < 6; i++) {
@@ -80,7 +80,7 @@ YAHTZEE.findCombinations = function(results) {
 			++equals[combis[i] - 1];
 		}
 	}
-	console.log(equals);
+//	console.log(equals);
 	return equals;
 }
 YAHTZEE.sort_results = function(results) {
