@@ -3,6 +3,42 @@ var airollcount = 0;
 var YAHTZEE = {};
 var airesults = [];
 YAHTZEE.info = {};
+Yahtzee = {
+	dices : [],
+	combinations : [],
+	ones : false,
+	twos : false,
+	threes : false,
+	fours : false,
+	sixes : false,
+	three_of_a_kind : false,
+	four_of_a_kind : false,
+	full_house : false,
+	small_straight : false,
+	large_straight : false,
+	yahtzee : false,
+	chance : false,
+	scoreones : 0,
+	scoretwos : 0,
+	scorethrees : 0,
+	scorefours : 0,
+	scorefives : 0,
+	scoresixes : 0,
+	scorethree_of_a_kind : 0,
+	scorefour_of_a_kind : 0,
+	scorefull_house : 0,
+	scoresmall_straight : 0,
+	scorelarge_straight : 0,
+	scoreyahtzee : 0,
+	scorechance : 0,
+	scoreuppergrid : 0,
+	scorelowergrid : 0,
+	bonusuppergrid : 0,
+	bonuslowergrid : 0,
+	countyahtzee : 0,
+	gameover : false,
+	disabled : 0
+}
 var SMALL_STRAIGHT_MASK1 = (1 << 0) + (1 << 1) + (1 << 2) + (1 << 3);
 var SMALL_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4);
 var SMALL_STRAIGHT_MASK3 = (1 << 2) + (1 << 3) + (1 << 4) + (1 << 5);
@@ -17,6 +53,19 @@ YAHTZEE.callback = function(total, info, results) {
 	var mask = 0;
 	for (let i = 0; i < 5; i++) {
 		mask = mask | (1 << (results[i] - 1));
+	}
+	if( (mask & LARGE_STRAIGHT_MASK1) == LARGE_STRAIGHT_MASK1 ) {
+		Yahtzee.large_straight = true;
+		Yahtzee.small_straight = true;
+	} else if( (mask & LARGE_STRAIGHT_MASK2) == LARGE_STRAIGHT_MASK2 ) {
+		Yahtzee.large_straight = true;
+		Yahtzee.small_straight = true;
+	} else if( (mask & SMALL_STRAIGHT_MASK1) == SMALL_STRAIGHT_MASK1 ) {
+		Yahtzee.small_straight = true;
+	} else if( (mask & SMALL_STRAIGHT_MASK2) == SMALL_STRAIGHT_MASK2  ) {
+		Yahtzee.small_straight = true;
+	} else if( (mask & SMALL_STRAIGHT_MASK3) == SMALL_STRAIGHT_MASK3  ) {
+		Yahtzee.small_straight = true;
 	}
 }
 YAHTZEE.findCombinations = function(results) {
