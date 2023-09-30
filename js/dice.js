@@ -21,10 +21,7 @@ $(document).ready(function() {
 	$("#dice4").css("background-image", "url('./assets/images/green.png')");
 	$("#dice5").css("background-image", "url('./assets/images/green.png')");
 
-	document.getElementById("dicebutton").click();
-	setTimeout(function() {
-		$('#dicebutton').trigger('click');
-	}, 30000);
+	$("#dicebutton").click();
 
 	$('#uppersec tbody td:nth-child(1)').click(function() {
 //		console.log("Upper HTML " + $(this).html() + " Cell Index: " + $(this).index() + " Row Index: " + $(this).closest('tr').index());
@@ -153,6 +150,7 @@ $(document).ready(function() {
 		else if (number == 6) { rollDice(dice4, 'bottom'); }
 		hmresults[4] = hmdicetabel[number-1];
 		console.log("Human results: " + hmresults);
+		$("#dicebutton").click();
 		var element = document.getElementById("dice__scene0");
 //		console.log(element.classList);
 		element.classList.add("selected");
@@ -181,9 +179,6 @@ $(document).ready(function() {
 		}
 		var results = [];
 		YAHTZEE.findCombinations(results);
-
-		setTimeout(function () { $("#dicebutton").trigger('click'); }, 30000);
-
 		soundEffect();
 	});
 });
