@@ -14,13 +14,40 @@ $(document).ready(function() {
 	var hmresults = [0,0,0,0,0];
 	var hmdicetabel = [1,6,4,3,2,5];
 	var random = Math.floor((Math.random() * 6) + 1);
-	console.log("Experiment: " + random);
-			if (random == 1) { rollDice(dice0, 'front'); }
-		else if (random == 2) { rollDice(dice0, 'back'); }
-		else if (random == 3) { rollDice(dice0, 'right'); }
-		else if (random == 4) { rollDice(dice0,'left'); }
-		else if (random == 5) { rollDice(dice0, 'top'); }
-		else if (random == 6) { rollDice(dice0, 'bottom'); }
+	if (random == 1) { rollDice(dice0, 'front'); }
+	else if (random == 2) { rollDice(dice0, 'back'); }
+	else if (random == 3) { rollDice(dice0, 'right'); }
+	else if (random == 4) { rollDice(dice0,'left'); }
+	else if (random == 5) { rollDice(dice0, 'top'); }
+	else if (random == 6) { rollDice(dice0, 'bottom'); }
+	random = Math.floor((Math.random() * 6) + 1);
+	if (random == 1) { rollDice(dice1, 'front'); }
+	else if (random == 2) { rollDice(dice1, 'back'); }
+	else if (random == 3) { rollDice(dice1, 'right'); }
+	else if (random == 4) { rollDice(dice1,'left'); }
+	else if (random == 5) { rollDice(dice1, 'top'); }
+	else if (random == 6) { rollDice(dice1, 'bottom'); }
+	random = Math.floor((Math.random() * 6) + 1);
+	if (random == 1) { rollDice(dice2, 'front'); }
+	else if (random == 2) { rollDice(dice2, 'back'); }
+	else if (random == 3) { rollDice(dice2, 'right'); }
+	else if (random == 4) { rollDice(dice2,'left'); }
+	else if (random == 5) { rollDice(dice2, 'top'); }
+	else if (random == 6) { rollDice(dice2, 'bottom'); }
+	random = Math.floor((Math.random() * 6) + 1);
+	if (random == 1) { rollDice(dice3, 'front'); }
+	else if (random == 2) { rollDice(dice3, 'back'); }
+	else if (random == 3) { rollDice(dice3, 'right'); }
+	else if (random == 4) { rollDice(dice3,'left'); }
+	else if (random == 5) { rollDice(dice3, 'top'); }
+	else if (random == 6) { rollDice(dice3, 'bottom'); }
+	random = Math.floor((Math.random() * 6) + 1);
+	if (random == 1) { rollDice(dice4, 'front'); }
+	else if (random == 2) { rollDice(dice4, 'back'); }
+	else if (random == 3) { rollDice(dice4, 'right'); }
+	else if (random == 4) { rollDice(dice4,'left'); }
+	else if (random == 5) { rollDice(dice4, 'top'); }
+	else if (random == 6) { rollDice(dice4, 'bottom'); }
 
 	$("#diceform").hide();
 	$("#dice1").css("background-image", "url('./assets/images/green.png')");
