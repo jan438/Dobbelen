@@ -13,6 +13,14 @@ $(document).ready(function() {
 	var val;
 	var hmresults = [0,0,0,0,0];
 	var hmdicetabel = [1,6,4,3,2,5];
+	var random = Math.floor((Math.random() * 6) + 1);
+	console.log("Experiment: " + random);
+			if (random == 1) { rollDice(dice0, 'front'); }
+		else if (random == 2) { rollDice(dice0, 'back'); }
+		else if (random == 3) { rollDice(dice0, 'right'); }
+		else if (random == 4) { rollDice(dice0,'left'); }
+		else if (random == 5) { rollDice(dice0, 'top'); }
+		else if (random == 6) { rollDice(dice0, 'bottom'); }
 
 	$("#diceform").hide();
 	$("#dice1").css("background-image", "url('./assets/images/green.png')");
