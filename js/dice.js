@@ -166,12 +166,6 @@ $(document).ready(function() {
 //		console.log(element.classList);
 		element.classList.add("selected");
 //		console.log(element.classList);
-
-		selectaidice(1);
-		deselectaidice(2);
-		selectaidice(3);
-		deselectaidice(4);
-		selectaidice(5);
 		val = (turncounter % 6);
 		switch( val ) {
 			case 0: switchturnhmind(1);
@@ -188,8 +182,6 @@ $(document).ready(function() {
 			break
 			default:
 		}
-		var results = [];
-		YAHTZEE.findCombinations(results);
 		soundEffect();
 	});
 });
