@@ -105,6 +105,27 @@ YAHTZEE.callback = function(total, info, results) {
 	deselectaidice(3);
 	deselectaidice(4);
 	deselectaidice(5);
+	AIYahtzee.ones = false;
+	AIYahtzee.twos = false;
+	AIYahtzee.threes = false;
+	AIYahtzee.fours = false;
+	AIYahtzee.fives = false;
+	AIYahtzee.sixes = false;
+	AIYahtzee.pair = false;
+	AIYahtzee.three_of_a_kind = false;
+	AIYahtzee.full_house = false;
+	AIYahtzee.small_straight = false;
+	AIYahtzee.large_straight = false;
+	AIYahtzee.four_of_a_kind = false;
+	AIYahtzee.yahtzee = false;
+	AIYahtzee.chance = true;
+	AIYahtzee.scoreones = 0;
+	AIYahtzee.scoretwos = 0;
+	AIYahtzee.scorethrees = 0;
+	AIYahtzee.scorefours = 0;
+	AIYahtzee.scorefives = 0;
+	AIYahtzee.scoresixes = 0;
+	AIYahtzee.scorechance = 0;
 	var mask = 0;
 	for (let i = 0; i < 5; i++) {
 		mask = mask | (1 << (results[i] - 1));
