@@ -71,22 +71,6 @@ $(document).ready(function() {
 		turncounter++;
 	}
 
-	function selectaidice(p) {
-		var bgimage = $("#dice" + p).css("background-image");
-		var imgend = bgimage.slice(-3,-2);
-		if (imgend === "g") {
-			$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
-		}
-	}
-
-	function deselectaidice(p) {
-		var bgimage = $("#dice" + p).css("background-image");
-		var imgend = bgimage.slice(-3,-2);
-		if (imgend === "f") {
-			$("#dice"+ p).css("background-image", "url('./assets/images/green.png')");
-		}
-	}
-
 	function randomizeNumber(low, high) {
 		var random = Math.floor((Math.random() * high) + low);
 		return random;

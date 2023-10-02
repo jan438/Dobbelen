@@ -75,6 +75,21 @@ HMYahtzee = {
 	gameover : false,
 	disabled : 0
 }
+function selectaidice(p) {
+	var bgimage = $("#dice" + p).css("background-image");
+	var imgend = bgimage.slice(-3,-2);
+	if (imgend === "g") {
+		$("#dice"+ p).css("background-image", "url('./assets/images/dieselected.gif')");
+	}
+}
+
+function deselectaidice(p) {
+	var bgimage = $("#dice" + p).css("background-image");
+	var imgend = bgimage.slice(-3,-2);
+	if (imgend === "f") {
+		$("#dice"+ p).css("background-image", "url('./assets/images/green.png')");
+	}
+}
 var SMALL_STRAIGHT_MASK1 = (1 << 0) + (1 << 1) + (1 << 2) + (1 << 3);
 var SMALL_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4);
 var SMALL_STRAIGHT_MASK3 = (1 << 2) + (1 << 3) + (1 << 4) + (1 << 5);
@@ -85,6 +100,11 @@ YAHTZEE.callback = function(total, info, results) {
 //	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
 	YAHTZEE.findCombinations(results);
+	deselectaidice(1);
+	deselectaidice(2);
+	deselectaidice(3);
+	deselectaidice(4);
+	deselectaidice(5);
 	var mask = 0;
 	for (let i = 0; i < 5; i++) {
 		mask = mask | (1 << (results[i] - 1));
