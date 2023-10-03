@@ -99,7 +99,6 @@ YAHTZEE.callback = function(total, info, results) {
 	airesults = results;
 //	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
-	YAHTZEE.findCombinations(results);
 	deselectaidice(1);
 	deselectaidice(2);
 	deselectaidice(3);
@@ -126,9 +125,61 @@ YAHTZEE.callback = function(total, info, results) {
 	AIYahtzee.scorefives = 0;
 	AIYahtzee.scoresixes = 0;
 	AIYahtzee.scorechance = 0;
+	var equals = YAHTZEE.findCombinations(airesults);
+	var sum = 0;
+	for (let i = 0; i < 5; i++) {
+		switch(airesults[i]) {
+			case 1: AIYahtzee.ones = true;
+				AIYahtzee.scoreones = AIYahtzee.scoreones + 1;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 1;
+				break;
+			case 2: AIYahtzee.twos = true;
+				AIYahtzee.scoretwos = AIYahtzee.scoretwos + 2;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 2;
+				break;
+			case 3: AIYahtzee.threes = true;
+				AIYahtzee.scorethrees = AIYahtzee.scorethrees + 3;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 3;
+				break;
+			case 4: AIYahtzee.fours = true;
+				AIYahtzee.scorefours = AIYahtzee.scorefours + 4;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 4;
+				break;
+			case 5: AIYahtzee.fives = true;
+				AIYahtzee.scorefives = AIYahtzee.scorefives + 5;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 5;
+				break;
+			case 6: AIYahtzee.sixes = true;
+				AIYahtzee.scoresixes = AIYahtzee.scoresixes + 6;
+				AIYahtzee.scorechance = AIYahtzee.scorechance + 6;
+				break;
+			}
+		}
+		for (let i = 0; i < 6; i++) {
+			sum = sum + equals[i];
+		}
+		for (let i = 0; i < 6; i++) {
+			if (equals[i] > 0) {
+				switch(equals[i]) {
+					case 1: AIYahtzee.pair = true;
+						if (AIYahtzee.three_of_a_kind == true) AIYahtzee.full_house = true;
+						break;
+					case 2: AIYahtzee.three_of_a_kind = true;
+						if (AIYahtzee.pair == true) AIYahtzee.full_house = true;
+						break;
+					case 3: AIYahtzee.three_of_a_kind = true;
+						AIYahtzee.four_of_a_kind = true;
+						break;
+					case 4: AIYahtzee.three_of_a_kind = true;
+						AIYahtzee.four_of_a_kind = true;
+						AIYahtzee.yahtzee = true;
+						break;
+				}
+			}
+		}
 	var mask = 0;
 	for (let i = 0; i < 5; i++) {
-		mask = mask | (1 << (results[i] - 1));
+		mask = mask | (1 << (airesults[i] - 1));
 	}
 	if( (mask & LARGE_STRAIGHT_MASK1) == LARGE_STRAIGHT_MASK1 ) {
 		AIYahtzee.large_straight = true;
