@@ -194,7 +194,7 @@ YAHTZEE.callback = function(total, info, results) {
 	} else if( (mask & SMALL_STRAIGHT_MASK3) == SMALL_STRAIGHT_MASK3  ) {
 		AIYahtzee.small_straight = true;
 	}
-	console.log("AI LS: " + AIYahtzee.large_straight + " SM: " + AIYahtzee.small_straight + " FH: " + AIYahtzee.full_house + " TK: " + AIYahtzee.three_of_a_kind);
+	console.log("AI LS: " + AIYahtzee.large_straight + " SM: " + AIYahtzee.small_straight + " FH: " + AIYahtzee.full_house + " TK: " + AIYahtzee.three_of_a_kind + " FK; " + AIYahtzee.four_of_a_kind);
 }
 YAHTZEE.findCombinations = function(results) {
 //	console.log("Findcombination: " + results);
