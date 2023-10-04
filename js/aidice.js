@@ -4,6 +4,7 @@ var YAHTZEE = {};
 var airesults = [];
 YAHTZEE.info = {};
 AIYahtzee = {
+	choosencategories : [false,false,false,false,false,false,false,false,false,false,false,false,false],
 	dices : [],
 	combinations : [],
 	ones : false,
@@ -97,6 +98,7 @@ var LARGE_STRAIGHT_MASK1 = (1 << 0) + (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4);
 var LARGE_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4) + (1 << 5);
 YAHTZEE.callback = function(total, info, results) {
 	airesults = results;
+	console.log("CC: " + AIYahtzee.choosencategories);
 //	console.log("Callback total: " + total + " results: " + results + " aiturncount: " + aiturncount + " airollcount: " + airollcount);
 	YAHTZEE.sort_results(airesults);
 	deselectaidice(1);
@@ -194,7 +196,7 @@ YAHTZEE.callback = function(total, info, results) {
 	} else if( (mask & SMALL_STRAIGHT_MASK3) == SMALL_STRAIGHT_MASK3  ) {
 		AIYahtzee.small_straight = true;
 	}
-	console.log("AI LS: " + AIYahtzee.large_straight + " SM: " + AIYahtzee.small_straight + " FH: " + AIYahtzee.full_house + " TK: " + AIYahtzee.three_of_a_kind + " FK; " + AIYahtzee.four_of_a_kind);
+	console.log("AI LS: " + AIYahtzee.large_straight + " SS: " + AIYahtzee.small_straight + " FH: " + AIYahtzee.full_house + " TK: " + AIYahtzee.three_of_a_kind + " FK; " + AIYahtzee.four_of_a_kind);
 }
 YAHTZEE.findCombinations = function(results) {
 //	console.log("Findcombination: " + results);
