@@ -500,6 +500,12 @@
 .blink2 {
 	animation: blink-animation 1s steps(5, start) infinite;
 }
+.blink3 {
+	animation-name: running;
+	animation-duration: 5s;
+	animation-play-state: running; /* default */
+	background: #173459;
+}
 @keyframes animate {
 	0% {
 		opacity: 0;
@@ -516,6 +522,12 @@
 		visibility: hidden;
 	}
 }
+@keyframes running {
+	0%     {background-color:red;}
+	50.0%  {background-color:#ff9999;}
+	100.0%  {background-color:red;}
+}
+
 #uppersec td:nth-child(1):hover {
 	background-color: yellow;
 }
