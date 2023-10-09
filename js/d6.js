@@ -221,6 +221,25 @@ D6Animator.prototype.reInitSeed = function() {
 function D6AnimGroup(id, animators, isSequenced) {  // The animators argument is an array of D6Animator and/or D6AnimGroup objects.
 	if ((typeof id != "string") || !id) return; // allows a dummy object to be created without causing errors below.
 	this.id = id;
+	this.allSelections = new HashMap();
+	for (d0 = 0; d0 <= 1; d0++) {
+			for (d1 = 0; d1 <= 1; d1++) {
+				for (d2 = 0; d2 <= 1; d2++) {
+					for (d3 = 0; d3 <= 1; d3++) {
+						for (d4 = 0; d4 <= 1; d4++) {
+							var arr = new Array(5);
+							arr[0] = (d0 == 0) ? 0 : 1;
+							arr[1] = (d1 == 0) ? 0 : 1;
+							arr[2] = (d2 == 0) ? 0 : 1;
+							arr[3] = (d3 == 0) ? 0 : 1;
+							arr[4] = (d4 == 0) ? 0 : 1;
+							var combo = new D6DiceSelection(arr);
+							this.allSelections.put(arr[0].toString() + arr[1].toString() + arr[2].toString() + arr[3].toString() + arr[4].toString(), combo);
+						}
+					}
+				}
+			}
+		}
 	D6AnimGroup.animgroups[id] = this;
 	this.animators = animators;
 	this.length = animators.length;
@@ -233,7 +252,22 @@ D6AnimGroup.animgroups = [];
 D6AnimGroup.get = function(id) {
 	return D6AnimGroup.animgroups[id];
 }
-
+function D6DiceSelection(arr) {
+	this.arr = arr;
+	this.evalue = 0.0;
+	this.logprivatevariables = function() {
+//		console.log(" arr: " + this.arr + " evalue: "+ this.evalue);
+	}
+	this.resetEValue = function() {
+		this.evalue = 0.0;
+	}
+	this.addEValue = function(evalprm) {
+		this.evalue = this.evalue + evalprm;
+	}
+	this.getEValue = function() {
+		return this.evalue;
+	}
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
