@@ -268,6 +268,62 @@ function D6DiceSelection(arr) {
 		return this.evalue;
 	}
 }
+function D6DiceCombination(arr) {
+	this.arr = arr;
+	this.category = 0;
+	this.score = 0;
+	this.probability = 0.0;
+	this.evalue = 0.0;
+	this.updateCombination = function(category, score, selectedDice) {
+		this.category = category;
+		this.score = score;
+		var diceRerolled = 0;
+		for (i = 0; i < selectedDice.length; i++) {
+			if (selectedDice[i] == 1)
+				diceRerolled++;
+		}
+		this.probability = Math.pow((1.0/6.0), diceRerolled);
+		this.evalue = this.probability * score;
+	}
+	this.getNonmatchingDiceForReroll = function(dice) {
+	}
+	this.getCombination = function() {
+	}
+	this.getEValue = function() {
+		return this.evalue;
+	}
+}
+
+D6AnimGroup.prototype.generateDiceCombinations = function(selections, dice) {
+	var countDiceCombinations = 0;
+	var result=[];
+	var lb0 = (selections[0] == 0 ? dice[0] : 1);
+	var ub0 = (selections[0] == 0 ? dice[0] : 6);
+	for (d0 = lb0; d0 <= ub0; d0++) {
+		var lb1 = (selections[1] == 0 ? dice[1] : 1);
+		var ub1 = (selections[1] == 0 ? dice[1] : 6);
+		for (d1 = lb1; d1 <= ub1; d1++) {
+			var lb2 = (selections[2] == 0 ? dice[2] : 1);
+			var ub2 = (selections[2] == 0 ? dice[2] : 6);
+			for (d2 = lb2; d2 <= ub2; d2++) {
+				var lb3 = (selections[3] == 0 ? dice[3] : 1);
+				var ub3 = (selections[3] == 0 ? dice[3] : 6);
+				for (d3 = lb3; d3 <= ub3; d3++) {
+					var lb4 = (selections[4] == 0 ? dice[4] : 1);
+					var ub4 = (selections[4] == 0 ? dice[4] : 6);
+					for (d4 = lb4; d4 <= ub4; d4++) {
+						var arr = [ d0, d1, d2, d3, d4 ];
+						var combo = new D7DiceCombination(arr);
+						result.push(combo);
+						countDiceCombinations++;
+					}
+				}
+			}
+		}
+	}
+//	console.log("CountDiceCombinations: " + countDiceCombinations);
+	return result;
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
@@ -282,6 +338,7 @@ D6AnimGroup.prototype.start = function(results) {
 			this.animators[i].start(this.results[i]);
 		}
 	}
+	console.log("D6 AnimGroup: " + this.id + " results: " + results);
 }
 
 D6AnimGroup.prototype.setCallback = function(callback, args) {
