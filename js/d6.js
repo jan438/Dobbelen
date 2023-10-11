@@ -313,7 +313,7 @@ D6AnimGroup.prototype.generateDiceCombinations = function(selections, dice) {
 					var ub4 = (selections[4] == 0 ? dice[4] : 6);
 					for (d4 = lb4; d4 <= ub4; d4++) {
 						var arr = [ d0, d1, d2, d3, d4 ];
-						var combo = new D7DiceCombination(arr);
+						var combo = new D6DiceCombination(arr);
 						result.push(combo);
 						countDiceCombinations++;
 					}
