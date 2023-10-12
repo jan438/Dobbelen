@@ -221,6 +221,16 @@ D6Animator.prototype.reInitSeed = function() {
 function D6AnimGroup(id, animators, isSequenced) {  // The animators argument is an array of D6Animator and/or D6AnimGroup objects.
 	if ((typeof id != "string") || !id) return; // allows a dummy object to be created without causing errors below.
 	this.id = id;
+	this.roll = 0;
+	this.bestSelection = null;
+	this.bestEValue = -1.0;
+	this.categoryHasBeenChosen = new Array();
+	this.setBestSelection = function(selection) {
+		this.bestSelection = selection;
+	}
+	this.getBestSelection = function() {
+		return this.bestSelection;
+	}
 	this.allSelections = new HashMap();
 	for (d0 = 0; d0 <= 1; d0++) {
 			for (d1 = 0; d1 <= 1; d1++) {
@@ -339,6 +349,9 @@ D6AnimGroup.prototype.start = function(results) {
 		}
 	}
 	console.log("D6 AnimGroup: " + this.id + " results: " + results);
+	var bestSelectionroll = this.getBestSelection();
+	var bestEValueroll = this.bestEValue;
+	var values = this.allSelections.toArray();
 }
 
 D6AnimGroup.prototype.setCallback = function(callback, args) {
