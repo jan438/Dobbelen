@@ -334,6 +334,23 @@ D6AnimGroup.prototype.generateDiceCombinations = function(selections, dice) {
 //	console.log("CountDiceCombinations: " + countDiceCombinations);
 	return result;
 }
+D6AnimGroup.prototype.chooseBestCategory = function(combination) {
+	var categoryIndex = 0;
+	var highestScore = -1;
+	var animatorgroup = D6AnimGroup.get("dice_0");
+//	for (category = 0; category < 13; category++) {
+//		if (animatorgroup.categoryHasBeenChosen[category] === "false") {
+//			var isValid = this.isDiceValidForCategory(combination, category);
+//			var score = 0;
+//			if (isValid) score = this.calculateCategoryScore(category, combination);
+//			if (score > highestScore) {
+//				highestScore = score;
+//				categoryIndex = category;
+//			}
+//		}
+//	}
+//	return categoryIndex;
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
@@ -352,6 +369,31 @@ D6AnimGroup.prototype.start = function(results) {
 	var bestSelectionroll = this.getBestSelection();
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
+	for (i = 0; i < values.length; i++) {
+		var selectionCombo = values[i];
+		var selectedDice = selectionCombo['arr'];
+		var selectedDicename = JSON.stringify(selectedDice);
+//		console.log(selectedDice);
+		selectionCombo.resetEValue();
+		this.allCombinations = this.generateDiceCombinations(selectionCombo['arr'], this.results);
+//		console.log("generateAllCombinations length: " + this.allCombinations.length);
+//		for (j = 0; j < this.allCombinations.length; j++) {
+//			combinationclass = this.allCombinations[j];
+//			combination = combinationclass['arr'];
+//			var category = this.chooseBestCategory(combination);
+//			var isValid = this.isDiceValidForCategory(combination, category);
+//			var score = 0;
+//			if (isValid) score = this.calculateCategoryScore(category, combination);
+//			combinationclass.updateCombination(category, score, selectedDice);
+//			var evalue = combinationclass.getEValue();
+//			selectionCombo.addEValue(evalue);
+//		}
+//		if (selectionCombo.getEValue() > bestEValueroll) {
+//			bestSelectionroll = selectionCombo;
+//			bestEValueroll = selectionCombo.getEValue();
+//		}
+//		selectionCombo.logprivatevariables();
+	}
 }
 
 D6AnimGroup.prototype.setCallback = function(callback, args) {
