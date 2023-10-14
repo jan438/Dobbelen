@@ -445,6 +445,54 @@ D6AnimGroup.prototype.isDiceValidForCategory = function(combination, category) {
 	}
 	return tempboolean;
 }
+D6AnimGroup.prototype.isSmallStraight = function(dice) {
+	const SSM1 = 15;
+	const SSM2 = 30;
+	const SSM3 = 60;
+	var mask = 0;
+	for (i = 0; i < 5; i++) {
+		mask = mask | (1 << (dice[i] - 1));
+	}
+	if ((mask & SSM1) == SSM1) {
+		return true;
+	} else if ((mask & SSM2) == SSM2) {
+		return true;
+	} else if ((mask & SSM3) == SSM3) {
+		return true;
+		}
+	return false;
+}
+D6AnimGroup.prototype.isLargeStraight = function(dice) {
+	const LSM1 = 31;
+	const LSM2 = 62;
+	var mask = 0;
+	for (i = 0; i < 5; i++) {
+		mask = mask | (1 << (dice[i] - 1));
+	}
+	if ((mask & LSM1) == LSM1) {
+		return true;
+	} else if ((mask & LSM2) == LSM2) {
+		return true;
+	}
+	return false;
+}
+D6AnimGroup.prototype.isNOfAKind = function(n, dice, exact) {
+	var result = false;
+	var equals = new Array(0,0,0,0,0,0);
+	for (i = 0; i < 5; i++) {
+		equals[dice[i] - 1]++;
+	}
+	for (i = 0; i < equals.length; i++) {
+		if (exact) {
+			if (equals[i] == n)
+				return true;
+		} else {
+			if (equals[i] >= n)
+				return true;
+		}
+	}
+	return result;
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
