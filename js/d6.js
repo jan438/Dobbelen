@@ -408,6 +408,43 @@ D6AnimGroup.prototype.sumDice = function(dice, dieValueRequirement) {
 	}
 	return result;
 }
+D6AnimGroup.prototype.isDiceValidForCategory = function(combination, category) {
+	const ONES = 0;
+	const SIXES = 5;
+	const THREE_OF_A_KIND = 6;
+	const FOUR_OF_A_KIND = 7;
+	const FULL_HOUSE = 8;
+	const SMALL_STRAIGHT = 9;
+	const LARGE_STRAIGHT = 10;
+	const YAHTZEE = 11;
+	const CHANCE = 12;
+	var tempboolean = false;
+	tempboolean = (category >= ONES && category <= SIXES);
+	if (tempboolean == true) {
+		for (i = 0; i < 5; i++) {
+			if ((combination[i] - 1) == category) return true;
+		}
+	}
+	switch (category) {
+		case THREE_OF_A_KIND:
+			return this.isNOfAKind(3, combination, false);
+		case FOUR_OF_A_KIND:
+			return this.isNOfAKind(4, combination, false);
+		case FULL_HOUSE:
+			return (this.isNOfAKind(3, combination, true) && this.isNOfAKind(2, combination, true));
+		case SMALL_STRAIGHT:
+			return (this.isSmallStraight(combination) || this.isLargeStraight(combination));
+		case LARGE_STRAIGHT:
+			return this.isLargeStraight(combination);
+		case YAHTZEE:
+			return this.isNOfAKind(5, combination, false);
+		case CHANCE:
+			return true;
+		default:
+			return false;
+	}
+	return tempboolean;
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
