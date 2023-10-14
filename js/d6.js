@@ -351,6 +351,63 @@ D6AnimGroup.prototype.chooseBestCategory = function(combination) {
 //	}
 //	return categoryIndex;
 }
+D6AnimGroup.prototype.calculateCategoryScore = function(category, dice) {
+	const ONES = 0;
+	const TWOS = 1;
+	const THREES = 2;
+	const FOURS = 3;
+	const FIVES = 4;
+	const SIXES = 5;
+	const THREE_OF_A_KIND = 6;
+	const FOUR_OF_A_KIND = 7;
+	const FULL_HOUSE = 8;
+	const SMALL_STRAIGHT = 9;
+	const LARGE_STRAIGHT = 10;
+	const YAHTZEE = 11;
+	const CHANCE = 12;
+	const FULL_HOUSE_SCORE = 25;
+	const SMALL_STRAIGHT_SCORE = 30;
+	const LARGE_STRAIGHT_SCORE = 40;
+	const YAHTZEE_SCORE = 50;
+	switch (category) {
+		case ONES:
+		case TWOS:
+		case THREES:
+		case FOURS:
+		case FIVES:
+		case SIXES:
+			return this.sumDice(dice, category + 1);
+		case THREE_OF_A_KIND:
+			return this.sumDice(dice, 0);
+		case FOUR_OF_A_KIND:
+			return this.sumDice(dice, 0);
+		case FULL_HOUSE:
+			return FULL_HOUSE_SCORE;
+		case SMALL_STRAIGHT:
+			return SMALL_STRAIGHT_SCORE;
+		case LARGE_STRAIGHT:
+			return LARGE_STRAIGHT_SCORE;
+		case YAHTZEE:
+			return YAHTZEE_SCORE;
+		case CHANCE:
+			return this.sumDice(dice, 0);
+		default:
+			return 0;
+	}
+
+}
+D6AnimGroup.prototype.sumDice = function(dice, dieValueRequirement) {
+	var result = 0;
+	for (i = 0; i < 5; i++) {
+		if (dieValueRequirement == 0) {
+			result = result + dice[i];
+		} else {
+			if (dice[i] == dieValueRequirement)
+				result = result + dice[i];
+		}
+	}
+	return result;
+}
 D6AnimGroup.prototype.start = function(results) {
 	this.results = results;
 	this.completions = [];
