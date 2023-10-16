@@ -338,8 +338,8 @@ D6AnimGroup.prototype.chooseBestCategory = function(combination) {
 	var categoryIndex = 0;
 	var highestScore = -1;
 	var animatorgroup = D6AnimGroup.get("dice_0");
-//	for (category = 0; category < 13; category++) {
-//		if (animatorgroup.categoryHasBeenChosen[category] === "false") {
+	for (category = 0; category < 13; category++) {
+		if (animatorgroup.categoryHasBeenChosen[category] === "false") {
 //			var isValid = this.isDiceValidForCategory(combination, category);
 //			var score = 0;
 //			if (isValid) score = this.calculateCategoryScore(category, combination);
@@ -347,9 +347,9 @@ D6AnimGroup.prototype.chooseBestCategory = function(combination) {
 //				highestScore = score;
 //				categoryIndex = category;
 //			}
-//		}
-//	}
-//	return categoryIndex;
+		}
+	}
+	return categoryIndex;
 }
 D6AnimGroup.prototype.calculateCategoryScore = function(category, dice) {
 	const ONES = 0;
