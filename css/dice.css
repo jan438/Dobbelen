@@ -504,7 +504,7 @@
 	animation-name: running;
 	animation-duration: 5s;
 	animation-play-state: running; /* default */
-	background: #173459;
+	background: #fdff66;
 }
 @keyframes animate {
 	0% {
