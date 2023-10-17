@@ -509,7 +509,19 @@ D6AnimGroup.prototype.start = function(results) {
 	}
 	console.log("D6 AnimGroup: " + this.id + " results: " + results);
 	this.categoryHasBeenChosen = [false,false,false,false,false,false,false,false,false,false,false,false,false];
+	this.categoryHasBeenChosen[0] = $('#aione').hasClass('aihighlight');
+	this.categoryHasBeenChosen[1] = $('#aitwo').hasClass('aihighlight');
+	this.categoryHasBeenChosen[2] = $('#aithree').hasClass('aihighlight');
+	this.categoryHasBeenChosen[3] = $('#aifour').hasClass('aihighlight');
+	this.categoryHasBeenChosen[4] = $('#aifive').hasClass('aihighlight');
+	this.categoryHasBeenChosen[5] = $('#aisix').hasClass('aihighlight');
+	this.categoryHasBeenChosen[6] = $('#aithreeofak').hasClass('aihighlight');
+	this.categoryHasBeenChosen[7] = $('#aifourofak').hasClass('aihighlight');
 	this.categoryHasBeenChosen[8] = $('#aifullhouse').hasClass('aihighlight');
+	this.categoryHasBeenChosen[9] = $('#aismallstreet').hasClass('aihighlight');
+	this.categoryHasBeenChosen[10] = $('#ailargestreet').hasClass('aihighlight');
+	this.categoryHasBeenChosen[11] = $('#aiyahtzee').hasClass('aihighlight');
+	this.categoryHasBeenChosen[12] = $('#aichance').hasClass('aihighlight');
 	var bestSelectionroll = this.getBestSelection();
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
