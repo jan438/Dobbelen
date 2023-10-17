@@ -508,6 +508,7 @@ D6AnimGroup.prototype.start = function(results) {
 		}
 	}
 	console.log("D6 AnimGroup: " + this.id + " results: " + results);
+	this.categoryHasBeenChosen = [false,false,false,false,false,false,false,false,false,false,false,false,false];
 	var bestSelectionroll = this.getBestSelection();
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
