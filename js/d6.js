@@ -266,7 +266,7 @@ function D6DiceSelection(arr) {
 	this.arr = arr;
 	this.evalue = 0.0;
 	this.logprivatevariables = function() {
-//		console.log(" arr: " + this.arr + " evalue: "+ this.evalue);
+		console.log(" arr: " + this.arr + " evalue: "+ this.evalue);
 	}
 	this.resetEValue = function() {
 		this.evalue = 0.0;
@@ -544,11 +544,11 @@ D6AnimGroup.prototype.start = function(results) {
 			var evalue = combinationclass.getEValue();
 			selectionCombo.addEValue(evalue);
 		}
-//		if (selectionCombo.getEValue() > bestEValueroll) {
-//			bestSelectionroll = selectionCombo;
-//			bestEValueroll = selectionCombo.getEValue();
-//		}
-//		selectionCombo.logprivatevariables();
+		if (selectionCombo.getEValue() > bestEValueroll) {
+			bestSelectionroll = selectionCombo;
+			bestEValueroll = selectionCombo.getEValue();
+		}
+		selectionCombo.logprivatevariables();
 	}
 }
 
