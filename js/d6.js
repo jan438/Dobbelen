@@ -529,21 +529,21 @@ D6AnimGroup.prototype.start = function(results) {
 		var selectionCombo = values[i];
 		var selectedDice = selectionCombo['arr'];
 		var selectedDicename = JSON.stringify(selectedDice);
-//		console.log(selectedDice);
+		console.log(selectedDice);
 		selectionCombo.resetEValue();
 		this.allCombinations = this.generateDiceCombinations(selectionCombo['arr'], this.results);
-//		console.log("generateAllCombinations length: " + this.allCombinations.length);
-//		for (j = 0; j < this.allCombinations.length; j++) {
-//			combinationclass = this.allCombinations[j];
-//			combination = combinationclass['arr'];
-//			var category = this.chooseBestCategory(combination);
-//			var isValid = this.isDiceValidForCategory(combination, category);
-//			var score = 0;
-//			if (isValid) score = this.calculateCategoryScore(category, combination);
-//			combinationclass.updateCombination(category, score, selectedDice);
-//			var evalue = combinationclass.getEValue();
-//			selectionCombo.addEValue(evalue);
-//		}
+		console.log("generateAllCombinations length: " + this.allCombinations.length);
+		for (j = 0; j < this.allCombinations.length; j++) {
+			combinationclass = this.allCombinations[j];
+			combination = combinationclass['arr'];
+			var category = this.chooseBestCategory(combination);
+			var isValid = this.isDiceValidForCategory(combination, category);
+			var score = 0;
+			if (isValid) score = this.calculateCategoryScore(category, combination);
+			combinationclass.updateCombination(category, score, selectedDice);
+			var evalue = combinationclass.getEValue();
+			selectionCombo.addEValue(evalue);
+		}
 //		if (selectionCombo.getEValue() > bestEValueroll) {
 //			bestSelectionroll = selectionCombo;
 //			bestEValueroll = selectionCombo.getEValue();
