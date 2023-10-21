@@ -555,34 +555,34 @@ D6AnimGroup.prototype.start = function(results) {
 		this.setBestSelection(bestSelectionroll);
 		var holdinfo = bestSelectionroll['arr'];
 		if (holdinfo[0] == 0) {
-//			$("#die5").addClass("selected");
+			$("#dice1").css("background-image", "url('./assets/images/dieselected.gif')");
 		}
 		else {
-//			$("#die5").removeClass("selected");
+			$("#dice1").css("background-image", "url('./assets/images/green.png')");
 		}
 		if (holdinfo[1] == 0) {
-//			$("#die6").addClass("selected");
+			$("#dice2").css("background-image", "url('./assets/images/dieselected.gif')");
 		}
 		else {
-//			$("#die6").removeClass("selected");
+			$("#dice2").css("background-image", "url('./assets/images/green.png')");
 		}
 		if (holdinfo[2] == 0) {
-//			$("#die7").addClass("selected");
+			$("#dice3").css("background-image", "url('./assets/images/dieselected.gif')");
 		}
 		else {
-//			$("#die7").removeClass("selected");
+			$("#dice3").css("background-image", "url('./assets/images/green.png')");
 		}
 		if (holdinfo[3] == 0) {
-//			$("#die8").addClass("selected");
+			$("#dice4").css("background-image", "url('./assets/images/dieselected.gif')");
 		}
 		else {
-//			$("#die8").removeClass("selected");
+			$("#dice4").css("background-image", "url('./assets/images/green.png')");
 		}
 		if (holdinfo[4] == 0) {
-//			$("#die9").addClass("selected");
+			$("#dice5").css("background-image", "url('./assets/images/dieselected.gif')");
 		}
 		else {
-//			$("#die9").removeClass("selected");
+			$("#dice5").css("background-image", "url('./assets/images/green.png')");
 		}
 	}
 }
