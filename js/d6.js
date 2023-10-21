@@ -550,6 +550,41 @@ D6AnimGroup.prototype.start = function(results) {
 		}
 		selectionCombo.logprivatevariables();
 	}
+	if (bestSelectionroll != null) {
+		bestSelectionroll.logprivatevariables();
+		this.setBestSelection(bestSelectionroll);
+		var holdinfo = bestSelectionroll['arr'];
+		if (holdinfo[0] == 0) {
+//			$("#die5").addClass("selected");
+		}
+		else {
+//			$("#die5").removeClass("selected");
+		}
+		if (holdinfo[1] == 0) {
+//			$("#die6").addClass("selected");
+		}
+		else {
+//			$("#die6").removeClass("selected");
+		}
+		if (holdinfo[2] == 0) {
+//			$("#die7").addClass("selected");
+		}
+		else {
+//			$("#die7").removeClass("selected");
+		}
+		if (holdinfo[3] == 0) {
+//			$("#die8").addClass("selected");
+		}
+		else {
+//			$("#die8").removeClass("selected");
+		}
+		if (holdinfo[4] == 0) {
+//			$("#die9").addClass("selected");
+		}
+		else {
+//			$("#die9").removeClass("selected");
+		}
+	}
 }
 
 D6AnimGroup.prototype.setCallback = function(callback, args) {
