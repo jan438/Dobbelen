@@ -340,13 +340,13 @@ D6AnimGroup.prototype.chooseBestCategory = function(combination) {
 	var animatorgroup = D6AnimGroup.get("dice_0");
 	for (category = 0; category < 13; category++) {
 		if (animatorgroup.categoryHasBeenChosen[category] === "false") {
-//			var isValid = this.isDiceValidForCategory(combination, category);
-//			var score = 0;
-//			if (isValid) score = this.calculateCategoryScore(category, combination);
-//			if (score > highestScore) {
-//				highestScore = score;
-//				categoryIndex = category;
-//			}
+			var isValid = this.isDiceValidForCategory(combination, category);
+			var score = 0;
+			if (isValid) score = this.calculateCategoryScore(category, combination);
+			if (score > highestScore) {
+				highestScore = score;
+				categoryIndex = category;
+			}
 		}
 	}
 	return categoryIndex;
