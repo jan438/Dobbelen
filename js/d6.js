@@ -266,7 +266,7 @@ function D6DiceSelection(arr) {
 	this.arr = arr;
 	this.evalue = 0.0;
 	this.logprivatevariables = function() {
-		console.log(" arr: " + this.arr + " evalue: "+ this.evalue);
+//		console.log(" arr: " + this.arr + " evalue: "+ this.evalue);
 	}
 	this.resetEValue = function() {
 		this.evalue = 0.0;
@@ -507,7 +507,7 @@ D6AnimGroup.prototype.start = function(results) {
 			this.animators[i].start(this.results[i]);
 		}
 	}
-	console.log("D6 AnimGroup: " + this.id + " results: " + results);
+//	console.log("D6 AnimGroup: " + this.id + " results: " + results);
 	this.categoryHasBeenChosen = [false,false,false,false,false,false,false,false,false,false,false,false,false];
 	this.categoryHasBeenChosen[0] = $('#aione').hasClass('aihighlight');
 	this.categoryHasBeenChosen[1] = $('#aitwo').hasClass('aihighlight');
@@ -523,16 +523,17 @@ D6AnimGroup.prototype.start = function(results) {
 	this.categoryHasBeenChosen[11] = $('#aiyahtzee').hasClass('aihighlight');
 	this.categoryHasBeenChosen[12] = $('#aichance').hasClass('aihighlight');
 	var bestSelectionroll = this.getBestSelection();
+	console.log('bestSelection: ' + JSON.stringify(bestSelectionroll));
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
 	for (i = 0; i < values.length; i++) {
 		var selectionCombo = values[i];
 		var selectedDice = selectionCombo['arr'];
 		var selectedDicename = JSON.stringify(selectedDice);
-		console.log(selectedDice);
+//		console.log(selectedDice);
 		selectionCombo.resetEValue();
 		this.allCombinations = this.generateDiceCombinations(selectionCombo['arr'], this.results);
-		console.log("generateAllCombinations length: " + this.allCombinations.length);
+//		console.log("generateAllCombinations length: " + this.allCombinations.length);
 		for (j = 0; j < this.allCombinations.length; j++) {
 			combinationclass = this.allCombinations[j];
 			combination = combinationclass['arr'];
