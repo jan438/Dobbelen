@@ -144,7 +144,7 @@ $(document).ready(function() {
 		else if (number == 5) { rollDice(dice4, 'top'); }
 		else if (number == 6) { rollDice(dice4, 'bottom'); }
 		hmresults[4] = hmdicetabel[number-1];
-		console.log("Human results: " + hmresults);
+//		console.log("Human results: " + hmresults);
 		$("#dicebutton").click();
 		var element = document.getElementById("dice__scene0");
 //		console.log(element.classList);
