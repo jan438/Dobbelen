@@ -221,7 +221,8 @@ D6Animator.prototype.reInitSeed = function() {
 function D6AnimGroup(id, animators, isSequenced) {  // The animators argument is an array of D6Animator and/or D6AnimGroup objects.
 	if ((typeof id != "string") || !id) return; // allows a dummy object to be created without causing errors below.
 	this.id = id;
-	console.log("===0 D6 AnimGroup class: " + this.id);
+	console.log("===0 D6 AnimGroup class");
+	console.log("* " + this.id);
 	this.roll = 0;
 	this.bestSelection = null;
 	this.bestEValue = -1.0;
@@ -332,7 +333,8 @@ D6AnimGroup.prototype.generateDiceCombinations = function(selections, dice) {
 			}
 		}
 	}
-	console.log("===2 CountDiceCombinations: " + countDiceCombinations);
+	console.log("===2 D6AnimGroup.prototype.generateDiceCombinations");
+	console.log("* CountDiceCombinations: " + countDiceCombinations);
 	return result;
 }
 D6AnimGroup.prototype.chooseBestCategory = function(combination) {
@@ -524,7 +526,8 @@ D6AnimGroup.prototype.start = function(results) {
 	this.categoryHasBeenChosen[11] = $('#aiyahtzee').hasClass('aihighlight');
 	this.categoryHasBeenChosen[12] = $('#aichance').hasClass('aihighlight');
 	var bestSelectionroll = this.getBestSelection();
-	console.log('===1 AI results: ' + JSON.stringify(this.results) + ' BestSelection: ' + JSON.stringify(bestSelectionroll));
+	console.log("===1 D6AnimGroup.prototype.start");
+	console.log("* AI results: " + JSON.stringify(this.results) + " BestSelection: " + JSON.stringify(bestSelectionroll));
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
 	for (i = 0; i < values.length; i++) {
