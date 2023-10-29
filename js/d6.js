@@ -526,7 +526,7 @@ D6AnimGroup.prototype.start = function(results) {
 	this.categoryHasBeenChosen[11] = $('#aiyahtzee').hasClass('aihighlight');
 	this.categoryHasBeenChosen[12] = $('#aichance').hasClass('aihighlight');
 	var bestSelectionroll = this.getBestSelection();
-	console.log("===1 D6AnimGroup.prototype.start");
+	console.log("===1 D6AnimGroup.prototype.start ===D6AnimBuilder.prototype.start");
 	console.log("* AI results: " + JSON.stringify(this.results) + " BestSelection: " + JSON.stringify(bestSelectionroll));
 	var bestEValueroll = this.bestEValue;
 	var values = this.allSelections.toArray();
