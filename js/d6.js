@@ -221,7 +221,7 @@ D6Animator.prototype.reInitSeed = function() {
 function D6AnimGroup(id, animators, isSequenced) {  // The animators argument is an array of D6Animator and/or D6AnimGroup objects.
 	if ((typeof id != "string") || !id) return; // allows a dummy object to be created without causing errors below.
 	this.id = id;
-	console.log("===0 D6 AnimGroup class");
+	console.log("===0 D6 AnimGroup class ===D6AnimBuilder.prototype.start");
 	console.log("* " + this.id);
 	this.roll = 0;
 	this.bestSelection = null;
