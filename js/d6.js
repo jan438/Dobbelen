@@ -333,7 +333,7 @@ D6AnimGroup.prototype.generateDiceCombinations = function(selections, dice) {
 			}
 		}
 	}
-	console.log("===2 D6AnimGroup.prototype.generateDiceCombinations");
+	console.log("===2 D6AnimGroup.prototype.generateDiceCombinations ===D6AnimGroup.prototype.start");
 	console.log("* CountDiceCombinations: " + countDiceCombinations);
 	return result;
 }
