@@ -296,6 +296,8 @@ function D6DiceCombination(arr) {
 		}
 		this.probability = Math.pow((1.0/6.0), diceRerolled);
 		this.evalue = this.probability * score;
+		console.log("===3 updateCombination ===D7DiceCombination");
+		console.log("evalue " + this.evalue);
 	}
 	this.getNonmatchingDiceForReroll = function(dice) {
 	}
