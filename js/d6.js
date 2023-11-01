@@ -354,6 +354,8 @@ D6AnimGroup.prototype.chooseBestCategory = function(combination) {
 			}
 		}
 	}
+	console.log("===4 D6AnimGroup.prototype.chooseBestCategory ===D6AnimGroup.prototype.start");
+	console.log("* CategoryIndex: " + categoryIndex);
 	return categoryIndex;
 }
 D6AnimGroup.prototype.calculateCategoryScore = function(category, dice) {
