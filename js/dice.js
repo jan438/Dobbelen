@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
-	var hmturncount = 0;
-	var hmrollcount = 0;
 	var history = [];
 	var dice0 = $('#dice__cube0');
 	var dice1 = $('#dice__cube1');
